@@ -1,2 +1,2 @@
-# to-do-web-application
+# teory-web-application
 Web application on Python with Flask.
