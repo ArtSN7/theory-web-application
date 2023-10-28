@@ -1,7 +1,9 @@
 html, body {
     height: 100%;
     width: 100%;
-    background-color: #2c2e33;
+
+    /*background-color: rgba(241, 241, 239, 1);*/
+    background-color: #0A1833;
     font-family: Arial;
     display: flex;
 }
@@ -48,7 +50,7 @@ html, body {
     height: 60px;
     margin-left: 20%;
     margin-right: 20%;
-    background-color: #102040;
+    background-color: #3361FF;
     color: #FFF;
     border: None;
     border-radius: 10px;
