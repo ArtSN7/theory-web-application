@@ -16,7 +16,7 @@ blueprint = flask.Blueprint('homepage', __name__, template_folder='templates')
 @blueprint.route('/homepage')
 @login_required
 def homepage():
-    return 'hello'
+    return render_template('java_theory/comments.html')
 
 
 
