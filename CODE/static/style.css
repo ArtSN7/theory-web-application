@@ -1,6 +1,8 @@
 html, body {
     height: 100%;
     width: 100%;
+
+    /*background-color: rgba(241, 241, 239, 1);*/
     background-color: #0A1833;
     font-family: Arial;
     display: flex;
