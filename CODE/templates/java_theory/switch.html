@@ -9,12 +9,6 @@ html {
 	-webkit-print-color-adjust: exact;
 }
 
-.theory{
-	color: rgb(55, 53, 47);
-	display: flex;
-	justify-content: space-between;
-}
-
 html,
 body {
 	margin: 0;
@@ -679,35 +673,112 @@ blockquote {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 	
-</style></head><div class="theory"><a href="/logout">PEVIOUS PAGE</a><a href="/logout">MENU</a><a href="/logout">NEXT PAGE</a></div><body><article id="de158db1-3943-4f34-8c43-fc96a55a30d1" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><h1 id="7bfe3672-6137-4f2e-94dc-b698e9367393" class="">Java Comments</h1><p id="44b2868d-c485-4580-b3d7-d6a2a095ad52" class="">In computer programming, comments are a portion of the program that are completely ignored by Java compilers. They are mainly used to help programmers to understand the code. For example,</p><pre id="a2c724f5-ffb3-49f2-8120-1adbb9bf864a" class="code code-wrap"><code>// declare and initialize two variables
-int a =1;
-int b = 3;
+</style></head><div class="theory"><a href="/logout">PEVIOUS PAGE</a><a href="/logout">MENU</a><a href="/logout">NEXT PAGE</a></div><body><article id="d7269495-a888-4404-9d09-fbd5e154e55c" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><h1 id="b855b1fb-b4ca-45b1-b2d1-1f95cbe8eb45" class="">Java switch Statement</h1><p id="13cae2b7-22bd-4579-863b-5dfe90314e84" class="">
+</p><p id="c9f05b20-f089-4eba-9ab4-374238c4dd09" class="">The <code>switch</code> statement allows us to execute a block of code among many alternatives.</p><p id="4d2eeb58-cc9c-4b8e-86ad-01bbe2242d39" class="">The syntax of the <code>switch</code> statement in Java is:</p><p id="e5a11e25-0716-4360-8a3d-8ce41f882435" class="">
+</p><pre id="0a711a76-a6e8-4d8e-b842-1c3be1b0c655" class="code code-wrap"><code>switch (expression) {
 
-// print the output
-System.out.println(&quot;This is output&quot;);
-</code></pre><p id="7c88181b-1513-4892-93b4-bb0cb46e9971" class="">Here, we have used the following comments,</p><ul id="ee418929-af0b-433b-9abd-1093a89892b1" class="bulleted-list"><li style="list-style-type:disc">declare and initialize two variables</li></ul><ul id="31d7ddb6-f8e6-461d-a708-200e98e0d5bf" class="bulleted-list"><li style="list-style-type:disc">print the output</li></ul><hr id="a6a0f94b-4479-4eaf-851e-596f6d93e16c"/><h1 id="92ce9982-6bf0-4e2c-84a6-9bf72dcccbce" class="">Types of Comments in Java</h1><p id="109b27ec-97a9-4532-9167-dd0e768dae81" class="">In Java, there are two types of comments:</p><ul id="3f1bf1cb-1a44-4259-9126-959fef5ba91c" class="bulleted-list"><li style="list-style-type:disc">single-line comment</li></ul><ul id="0100ff2b-c1f8-4cc8-8842-dcb38c554e1b" class="bulleted-list"><li style="list-style-type:disc">multi-line comment</li></ul><hr id="cfd34bb9-9724-468d-a9b9-19f138c5b58c"/><h3 id="e9a8df90-f5e6-4a86-af1c-de4458c727f8" class=""><strong>Single-line Comment</strong></h3><p id="b36b471e-c9fd-4a9e-8a16-704562aca8a3" class="">A single-line comment starts and ends in the same line. To write a single-line comment, we can use the <code>//</code> symbol. For example,</p><pre id="65b5bb84-8b33-445b-b4d8-91f6496ac81d" class="code code-wrap"><code>// &quot;Hello, World!&quot; program example
+  case value1:
+    // code
+    break;
+
+  case value2:
+    // code
+    break;
+
+  default:
+    // default statements
+
+  }</code></pre><p id="3c2a3810-e7f1-48ef-8e8d-535f67892731" class="">
+</p><hr id="359714ba-5f60-4cf8-a29a-0313f0262ca3"/><h1 id="5571e3f9-53fe-41ef-9a5e-33e85d20920b" class="">Example: Java switch Statement</h1><pre id="0edd8dc0-1416-4b98-bf5d-95f6dbd7b0c0" class="code code-wrap"><code>// Java Program to check the size
+// using the switch...case statement
 
 class Main {
-    public static void main(String[] args) {
-        // prints &quot;Hello, World!&quot;
-        System.out.println(&quot;Hello, World!&quot;);
-    }
-}
-</code></pre><p id="96c7cad1-dd0e-485a-af8b-72df4c08b506" class="">
-</p><p id="a10835bc-57c9-420d-b8f5-e367a8fb699f" class=""><strong>Output</strong>:</p><pre id="1907e591-69f2-40ad-b74b-2000305abdfc" class="code code-wrap"><code>Hello, World!
-</code></pre><p id="38def8fe-710e-408a-ac55-66b8010c05eb" class="">Here, we have used two single-line comments:</p><ul id="3b6e86d0-1b3e-42af-98de-5d52f3c0f757" class="bulleted-list"><li style="list-style-type:disc">&quot;Hello, World!&quot; program example</li></ul><ul id="7f98247c-f0ed-4aff-9a7a-303726408041" class="bulleted-list"><li style="list-style-type:disc">prints &quot;Hello World!&quot;</li></ul><p id="6b86533b-ff49-4f92-bd65-4c3b8ed3f6a4" class="">The Java compiler ignores everything from <code>//</code> to the end of line. Hence, it is also known as <strong>End of Line</strong> comment.</p><hr id="d11496e8-97ce-40d1-924d-a8409cb31713"/><h3 id="5999faa3-c53d-40b2-ab74-b7f4554e9fae" class=""><strong>Multi-line Comment</strong></h3><p id="9fd2b241-15ed-48f3-bc91-bd5a00774158" class="">When we want to write comments in multiple lines, we can use the multi-line comment. To write multi-line comments, we can use the /*....*/ symbol. For example,</p><pre id="7a741d57-c250-496e-b394-6d175255d9c5" class="code code-wrap"><code>/* This is an example of  multi-line comment.
- * The program prints &quot;Hello, World!&quot; to the standard output.
- */
+  public static void main(String[] args) {
 
-class HelloWorld {
-    public static void main(String[] args) {
+    int number = 44;
+    String size;
 
-        System.out.println(&quot;Hello, World!&quot;);
+    // switch statement to check size
+    switch (number) {
+
+      case 29:
+        size = &quot;Small&quot;;
+        break;
+
+      case 42:
+        size = &quot;Medium&quot;;
+        break;
+
+      // match the value of week
+      case 44:
+        size = &quot;Large&quot;;
+        break;
+
+      case 48:
+        size = &quot;Extra Large&quot;;
+        break;
+
+      default:
+        size = &quot;Unknown&quot;;
+        break;
+
     }
-}
-</code></pre><p id="dfbf2938-8ae8-4051-a935-1431a931eaad" class="">
-</p><p id="4dec587a-4457-4fe3-a9f0-f7245ab242e4" class=""><strong>Output</strong>:</p><pre id="e9ef73b3-5a2c-40e8-b606-41e9be0cf0bc" class="code code-wrap"><code>Hello, World!
-</code></pre><p id="dc49fbd5-372e-46c4-93c6-6bfaa10e95a1" class="">Here, we have used the multi-line comment:</p><pre id="3d136070-5110-4577-85ce-9017f8d826a0" class="code code-wrap"><code>/* This is an example of multi-line comment.
-* The program prints &quot;Hello, World!&quot; to the standard output.
-*/
-</code></pre><p id="e645e3e6-7558-4847-808f-748b3586f41d" class="">This type of comment is also known as <strong>Traditional Comment</strong>. In this type of comment, the Java compiler ignores everything from <code>/*</code> to <code>*/</code>.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+    System.out.println(&quot;Size: &quot; + size);
+  }
+}</code></pre><p id="d3f49164-74ee-499a-8dc4-4b62928958fc" class="">
+</p><p id="4c836a46-0633-476a-b0af-030e5658851e" class=""><strong>Output</strong>:</p><pre id="88cf805c-b903-418a-8f54-9f946757f5e7" class="code code-wrap"><code>Size: Large</code></pre><p id="2af8870f-1ea9-4c39-97c0-5fa5a28f98d5" class="">In the above example, we have used the switch statement to find the size. Here, we have a variable number. The variable is compared with the value of each case statement.</p><p id="bd4410ca-1ecc-4a3e-b4ad-b2c6d16a5273" class="">Since the value matches with <strong>44</strong>, the code of <code>case 44</code> is executed.</p><pre id="75435e92-47d0-404e-875b-53b1b75023fc" class="code code-wrap"><code>size = &quot;Large&quot;;
+break;</code></pre><p id="c8edccb5-387d-4e8a-9232-9224c1d7c031" class="">Here, the size variable is assigned with the value <code>Large</code>.</p><p id="2666baba-2208-486a-9e32-d1336483429a" class="">
+</p><hr id="316e5ce1-be41-4100-a12d-23d954b8ba2f"/><h1 id="b67609ff-e6aa-4535-a994-818ffbfda457" class="">Break statement in Java switch...case</h1><p id="57a49e92-a0bb-494d-8fd0-b07df2be608f" class="">
+</p><p id="dd344204-dec2-43bf-991a-5bbb4305dd8c" class="">Notice that we have been using <code>break</code> in each case block.</p><pre id="a5f8865f-4171-42ef-b60b-ed6b4d9c70e1" class="code code-wrap"><code> ...
+case 29:
+  size = &quot;Small&quot;;
+  break;
+...</code></pre><p id="90c02066-44fc-4443-bdb3-d2c6b7fa0d47" class="">The <code>break</code> statement is used to terminate the <strong>switch-case</strong> statement. If <code>break</code> is not used, all the cases after the matching case are also executed. For example,</p><pre id="52d2df87-2aaf-4082-998f-aeb6dad425bc" class="code code-wrap"><code>class Main {
+  public static void main(String[] args) {
+
+    int expression = 2;
+
+    // switch statement to check size
+    switch (expression) {
+      case 1:
+        System.out.println(&quot;Case 1&quot;);
+
+        // matching case
+      case 2:
+        System.out.println(&quot;Case 2&quot;);
+
+      case 3:
+        System.out.println(&quot;Case 3&quot;);
+
+      default:
+        System.out.println(&quot;Default case&quot;);
+    }
+  }
+}</code></pre><p id="f30ba1d1-5d61-4db8-a9fa-48222f97d355" class="">
+</p><p id="1c407361-12c4-4199-adac-6d71a17a0d23" class=""><strong>Output</strong></p><pre id="78a0b05e-e059-46a3-b671-03f1654c0e2e" class="code code-wrap"><code>Case 2
+Case 3
+Default case</code></pre><p id="c20c882b-e9af-44c0-861c-2c16c0b2031d" class="">
+</p><hr id="63b1cc5c-2f88-4768-95a4-d0b1e3b79331"/><h1 id="e2fc777d-9042-45b6-8f93-13cff00f86e1" class="">Default case in Java switch-case</h1><p id="913bf352-14eb-4669-afdd-9b12e587ff14" class="">The switch statement also includes an <strong>optional default case</strong>. It is executed when the expression doesn&#x27;t match any of the cases. For example,</p><pre id="7c665841-e106-4f30-8e69-665e5380ef43" class="code code-wrap"><code>class Main {
+  public static void main(String[] args) {
+
+    int expression = 9;
+
+    switch(expression) {
+
+      case 2:
+        System.out.println(&quot;Small Size&quot;);
+        break;
+
+      case 3:
+        System.out.println(&quot;Large Size&quot;);
+        break;
+
+      // default case
+      default:
+        System.out.println(&quot;Unknown Size&quot;);
+    }
+  }
+}</code></pre><p id="27f08480-74a3-417b-8656-d4173205a88e" class="">
+</p><p id="e1fa8a55-8ccc-4285-bdeb-bb5da8304cc3" class=""><strong>Output</strong></p><pre id="9414fbb5-610e-408c-8e36-eb3214d05231" class="code code-wrap"><code>Unknown Size</code></pre><p id="0a002d98-34ce-4891-a89f-62e9ce02cc06" class="">In the above example, we have created a <strong>switch-case</strong> statement. Here, the value of expression doesn&#x27;t match with any of the cases.</p><p id="8acd1f84-b69a-42d1-9fd7-b1c457a70a34" class="">Hence, the code inside the <strong>default case</strong> is executed.</p><pre id="871402e8-e130-4060-ac00-d1f70b1b3010" class="code code-wrap"><code>default:
+  System.out.println(&quot;Unknown Size);</code></pre><p id="7a2a003f-5809-48a8-abf5-6fd538e52a6e" class="">
+</p><hr id="4fa180d7-f153-4e3d-9c1f-c4cbfa379f25"/></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

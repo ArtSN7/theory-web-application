@@ -9,12 +9,6 @@ html {
 	-webkit-print-color-adjust: exact;
 }
 
-.theory{
-	color: rgb(55, 53, 47);
-	display: flex;
-	justify-content: space-between;
-}
-
 html,
 body {
 	margin: 0;
@@ -679,35 +673,76 @@ blockquote {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 	
-</style></head><div class="theory"><a href="/logout">PEVIOUS PAGE</a><a href="/logout">MENU</a><a href="/logout">NEXT PAGE</a></div><body><article id="de158db1-3943-4f34-8c43-fc96a55a30d1" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><h1 id="7bfe3672-6137-4f2e-94dc-b698e9367393" class="">Java Comments</h1><p id="44b2868d-c485-4580-b3d7-d6a2a095ad52" class="">In computer programming, comments are a portion of the program that are completely ignored by Java compilers. They are mainly used to help programmers to understand the code. For example,</p><pre id="a2c724f5-ffb3-49f2-8120-1adbb9bf864a" class="code code-wrap"><code>// declare and initialize two variables
-int a =1;
-int b = 3;
+</style></head><div class="theory"><a href="/logout">PEVIOUS PAGE</a><a href="/logout">MENU</a><a href="/logout">NEXT PAGE</a></div><body><article id="529734b5-3382-4db4-a61c-36f279937d0d" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><h1 id="a664a5ea-6ba1-4c24-b356-15d9194447ec" class="">Java Output</h1><p id="3abfa2f0-e35d-4b89-9347-1a3e9ec1322c" class="">In Java, you can simply use</p><pre id="1b3299d9-2215-41f5-b2fe-4e7bb01798f4" class="code code-wrap"><code>System.out.println(); or
 
-// print the output
-System.out.println(&quot;This is output&quot;);
-</code></pre><p id="7c88181b-1513-4892-93b4-bb0cb46e9971" class="">Here, we have used the following comments,</p><ul id="ee418929-af0b-433b-9abd-1093a89892b1" class="bulleted-list"><li style="list-style-type:disc">declare and initialize two variables</li></ul><ul id="31d7ddb6-f8e6-461d-a708-200e98e0d5bf" class="bulleted-list"><li style="list-style-type:disc">print the output</li></ul><hr id="a6a0f94b-4479-4eaf-851e-596f6d93e16c"/><h1 id="92ce9982-6bf0-4e2c-84a6-9bf72dcccbce" class="">Types of Comments in Java</h1><p id="109b27ec-97a9-4532-9167-dd0e768dae81" class="">In Java, there are two types of comments:</p><ul id="3f1bf1cb-1a44-4259-9126-959fef5ba91c" class="bulleted-list"><li style="list-style-type:disc">single-line comment</li></ul><ul id="0100ff2b-c1f8-4cc8-8842-dcb38c554e1b" class="bulleted-list"><li style="list-style-type:disc">multi-line comment</li></ul><hr id="cfd34bb9-9724-468d-a9b9-19f138c5b58c"/><h3 id="e9a8df90-f5e6-4a86-af1c-de4458c727f8" class=""><strong>Single-line Comment</strong></h3><p id="b36b471e-c9fd-4a9e-8a16-704562aca8a3" class="">A single-line comment starts and ends in the same line. To write a single-line comment, we can use the <code>//</code> symbol. For example,</p><pre id="65b5bb84-8b33-445b-b4d8-91f6496ac81d" class="code code-wrap"><code>// &quot;Hello, World!&quot; program example
+System.out.print(); or
 
-class Main {
-    public static void main(String[] args) {
-        // prints &quot;Hello, World!&quot;
-        System.out.println(&quot;Hello, World!&quot;);
-    }
-}
-</code></pre><p id="96c7cad1-dd0e-485a-af8b-72df4c08b506" class="">
-</p><p id="a10835bc-57c9-420d-b8f5-e367a8fb699f" class=""><strong>Output</strong>:</p><pre id="1907e591-69f2-40ad-b74b-2000305abdfc" class="code code-wrap"><code>Hello, World!
-</code></pre><p id="38def8fe-710e-408a-ac55-66b8010c05eb" class="">Here, we have used two single-line comments:</p><ul id="3b6e86d0-1b3e-42af-98de-5d52f3c0f757" class="bulleted-list"><li style="list-style-type:disc">&quot;Hello, World!&quot; program example</li></ul><ul id="7f98247c-f0ed-4aff-9a7a-303726408041" class="bulleted-list"><li style="list-style-type:disc">prints &quot;Hello World!&quot;</li></ul><p id="6b86533b-ff49-4f92-bd65-4c3b8ed3f6a4" class="">The Java compiler ignores everything from <code>//</code> to the end of line. Hence, it is also known as <strong>End of Line</strong> comment.</p><hr id="d11496e8-97ce-40d1-924d-a8409cb31713"/><h3 id="5999faa3-c53d-40b2-ab74-b7f4554e9fae" class=""><strong>Multi-line Comment</strong></h3><p id="9fd2b241-15ed-48f3-bc91-bd5a00774158" class="">When we want to write comments in multiple lines, we can use the multi-line comment. To write multi-line comments, we can use the /*....*/ symbol. For example,</p><pre id="7a741d57-c250-496e-b394-6d175255d9c5" class="code code-wrap"><code>/* This is an example of  multi-line comment.
- * The program prints &quot;Hello, World!&quot; to the standard output.
- */
-
-class HelloWorld {
+System.out.printf();
+</code></pre><p id="9ebfc940-b4f6-42d1-8c25-8b831dfff21f" class="">to send output to standard output (screen).</p><p id="14d6ac37-6266-4788-af1e-b2ecdd46c6e3" class="">Here,</p><ul id="905cd245-ad2f-47aa-b968-f57d44a7c3d8" class="bulleted-list"><li style="list-style-type:disc"><code>System</code> is a class</li></ul><ul id="da8fc808-6d16-41df-af67-32d50b87a323" class="bulleted-list"><li style="list-style-type:disc"><code>out</code> is a <code>public</code> <code>static</code> field: it accepts output data.</li></ul><p id="b892af99-de6e-439f-b6d8-1dd48dc3675c" class="">
+</p><p id="5d1f2904-9575-4519-80c6-db296248ccdb" class="">Let&#x27;s take an example to output a line.</p><pre id="a19acb34-1f04-4c02-882c-8b3bf86d12c4" class="code code-wrap"><code>class AssignmentOperator {
     public static void main(String[] args) {
 
-        System.out.println(&quot;Hello, World!&quot;);
+        System.out.println(&quot;Java programming is interesting.&quot;);
     }
 }
-</code></pre><p id="dfbf2938-8ae8-4051-a935-1431a931eaad" class="">
-</p><p id="4dec587a-4457-4fe3-a9f0-f7245ab242e4" class=""><strong>Output</strong>:</p><pre id="e9ef73b3-5a2c-40e8-b606-41e9be0cf0bc" class="code code-wrap"><code>Hello, World!
-</code></pre><p id="dc49fbd5-372e-46c4-93c6-6bfaa10e95a1" class="">Here, we have used the multi-line comment:</p><pre id="3d136070-5110-4577-85ce-9017f8d826a0" class="code code-wrap"><code>/* This is an example of multi-line comment.
-* The program prints &quot;Hello, World!&quot; to the standard output.
-*/
-</code></pre><p id="e645e3e6-7558-4847-808f-748b3586f41d" class="">This type of comment is also known as <strong>Traditional Comment</strong>. In this type of comment, the Java compiler ignores everything from <code>/*</code> to <code>*/</code>.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+</code></pre><p id="a3f7d277-ce2a-4eca-a73e-cbeea1350214" class=""><strong>Output</strong>:</p><pre id="0c448128-adf4-4d50-ac40-029d7a9bd9be" class="code code-wrap"><code>Java programming is interesting.
+</code></pre><p id="8b94f147-f0f2-4f82-8bbd-e5f6a85250c2" class="">Here, we have used the <code>println()</code> method to display the string.</p><hr id="b27f4ec4-4955-495b-8dc9-c11086e8fd72"/><h3 id="1ffcb526-1f7b-4577-a633-0225167ef510" class=""><strong>Difference between println(), print() and printf()</strong></h3><ul id="8b6502b2-8938-4c06-ace3-58bd1670ccfc" class="bulleted-list"><li style="list-style-type:disc"><code>print()</code> - It prints string inside the quotes.</li></ul><ul id="3f4172f9-9c70-4dba-a0fd-5708523a0d79" class="bulleted-list"><li style="list-style-type:disc"><code>println()</code> - It prints string inside the quotes similar like <code>print()</code> method. Then the cursor moves to the beginning of the next line.</li></ul><ul id="e7919f0f-4de1-4bed-88f0-733ce6eabdc4" class="bulleted-list"><li style="list-style-type:disc"><code>printf()</code> - It provides string formatting.</li></ul><hr id="27884769-1439-4a85-869d-a97b59ea2aff"/><h3 id="7cdd0a0a-3b02-435a-868a-55afaa5ca091" class=""><strong>Example: print() and println()</strong></h3><pre id="9905d20f-66f0-4632-a346-cea0e79e06fd" class="code code-wrap"><code>class Output {
+    public static void main(String[] args) {
+
+        System.out.println(&quot;1. println &quot;);
+        System.out.println(&quot;2. println &quot;);
+
+        System.out.print(&quot;1. print &quot;);
+        System.out.print(&quot;2. print&quot;);
+    }
+}
+</code></pre><p id="51dab8d3-1be0-4b43-99c1-41bdd960afa0" class=""><strong>Output</strong>:</p><pre id="48f76100-6f5a-405b-b92b-62f55797f80c" class="code code-wrap"><code>1. println
+2. println
+1. print 2. print
+</code></pre><p id="f7cf0984-0e48-47af-82f7-34b9874f5769" class="">In the above example, we have shown the working of the <code>print()</code> and <code>println()</code>methods. To learn about the <code>printf()</code> method, visit <a href="https://www.cs.colostate.edu/~cs160/.Summer16/resources/Java_printf_method_quick_reference.pdf">Java printf()</a>.</p><hr id="233afbfc-27c7-43c1-a281-a92915cdd959"/><p id="57f63675-5ead-44a5-a6bd-aa6b663ae614" class="">
+</p><h3 id="a7df3b1c-b009-4872-88af-d5e7ed7e1317" class=""><strong>Example: Print Concatenated Strings</strong></h3><p id="71b4c31f-7375-469a-9bb5-6d1a24a714a1" class="">
+</p><pre id="d16d326d-1cef-4e22-acf1-64b86fe22857" class="code code-wrap"><code>class PrintVariables {
+    public static void main(String[] args) {
+
+        Double number = -10.6;
+
+        System.out.println(&quot;I am &quot; + &quot;awesome.&quot;);
+        System.out.println(&quot;Number = &quot; + number);
+    }
+}
+</code></pre><p id="4d0e90f8-2183-491b-a6c1-562fe143e696" class="">
+</p><p id="62297ee4-b02e-4edf-b4ba-9f687f4887d4" class=""><strong>Output</strong>:</p><pre id="8041419c-ef8e-4f94-a733-8f3003bc735c" class="code code-wrap"><code>I am awesome.
+Number = -10.6
+</code></pre><p id="d1b16ce4-5972-4fb8-88cf-d91218c08278" class="">
+</p><hr id="cd411eb3-0747-4914-9eac-b91fc4660f3d"/><h1 id="cc199919-36af-47f0-8e54-c755e1f0b89e" class="">Java Input</h1><p id="4ecb1a60-d34b-45b4-a0d3-fedc70b86849" class="">Java provides different ways to get input from the user. However, in this tutorial, you will learn to get input from user using the object of <code>Scanner</code> class.</p><p id="f8b61f05-45bf-460e-937f-62a36db6ffc5" class="">In order to use the object of <code>Scanner</code>, we need to import <code>java.util.Scanner</code> package.</p><pre id="db242baa-0df6-4d7e-9a49-55ab78140395" class="code code-wrap"><code>import java.util.Scanner;
+</code></pre><p id="87189d16-116f-4593-8df7-7aa8f8282b64" class="">To learn more about importing packages in Java, visit <a href="https://www.programiz.com/java-programming/packages-import">Java Import Packages</a>.</p><p id="377a25ee-2ded-4186-8cc9-cb5151ab00f1" class="">Then, we need to create an object of the <code>Scanner</code> class. We can use the object to take input from the user.</p><pre id="dc1d7f75-5a34-4a20-8a32-a526e233db9b" class="code code-wrap"><code>// create an object of Scanner
+Scanner input = new Scanner(System.in);
+
+// take input from the user
+int number = input.nextInt();
+</code></pre><p id="6a7afc4c-c59f-46c5-a743-6ec87711d857" class="">
+</p><p id="ced6d317-3b58-4a71-8f8e-2b430f78cbda" class=""><strong>Similarly, we can use </strong><strong><code>nextLong()</code></strong><strong>, </strong><strong><code>nextFloat()</code></strong><strong>, </strong><strong><code>nextDouble()</code></strong><strong>, and </strong><strong><code>next()</code></strong><strong> methods to get </strong><strong><code>long</code></strong><strong>, </strong><strong><code>float</code></strong><strong>, </strong><strong><code>double</code></strong><strong>, and </strong><strong><code>string</code></strong><strong> input respectively from the user.</strong></p><p id="2f023b12-50fc-4cd8-ab4c-625a9f5ce033" class="">
+</p><hr id="fb18cb29-51ff-4f3d-9423-121bb4eb4ddc"/><h3 id="32aa550c-17e4-4973-98a9-d5c1b0f0633a" class=""><strong>Example: Get Integer Input From the User</strong></h3><pre id="2371c1da-7731-489e-adb6-6b774b86591f" class="code code-wrap"><code>import java.util.Scanner;
+
+class Input {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print(&quot;Enter an integer: &quot;);
+
+        int number = input.nextInt();
+
+        System.out.println(&quot;You entered &quot; + number);
+
+        // closing the scanner object
+        input.close();
+    }
+}
+</code></pre><p id="4a674eaf-77a9-4c34-bf5f-fdba70785475" class="">
+</p><p id="e043e4b8-368e-465c-8b40-af585829002b" class=""><strong>Output</strong>:</p><pre id="9660158c-5ff7-4704-83e0-4dc72d879edd" class="code code-wrap"><code>Enter an integer: 23
+You entered 23
+</code></pre><p id="140104b8-848b-4f0a-82e5-423a1b3ebb74" class="">
+</p><p id="5e137910-87b5-419d-a3f6-e798a338a397" class="">
+</p><p id="43340616-cd99-4433-8911-a7313b14492d" class=""><strong>Note</strong>: We have used the <code>close()</code> method to close the object. It is recommended to close the scanner object once the input is taken.</p><hr id="2f55bc3c-af26-479f-a89e-e89718077a20"/><p id="6cf28ded-a4f0-453b-a601-835601b27214" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

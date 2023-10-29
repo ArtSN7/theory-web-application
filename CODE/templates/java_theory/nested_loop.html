@@ -9,12 +9,6 @@ html {
 	-webkit-print-color-adjust: exact;
 }
 
-.theory{
-	color: rgb(55, 53, 47);
-	display: flex;
-	justify-content: space-between;
-}
-
 html,
 body {
 	margin: 0;
@@ -679,35 +673,14 @@ blockquote {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 	
-</style></head><div class="theory"><a href="/logout">PEVIOUS PAGE</a><a href="/logout">MENU</a><a href="/logout">NEXT PAGE</a></div><body><article id="de158db1-3943-4f34-8c43-fc96a55a30d1" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><h1 id="7bfe3672-6137-4f2e-94dc-b698e9367393" class="">Java Comments</h1><p id="44b2868d-c485-4580-b3d7-d6a2a095ad52" class="">In computer programming, comments are a portion of the program that are completely ignored by Java compilers. They are mainly used to help programmers to understand the code. For example,</p><pre id="a2c724f5-ffb3-49f2-8120-1adbb9bf864a" class="code code-wrap"><code>// declare and initialize two variables
-int a =1;
-int b = 3;
+</style></head><div class="theory"><a href="/logout">PEVIOUS PAGE</a><a href="/logout">MENU</a><a href="/logout">NEXT PAGE</a></div><body><article id="34c49b06-e868-4038-bf1a-d68cdce577c0" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><h1 id="d7e61a49-39b5-4c13-b4d4-a1c9b71d025d" class="">Nested Loop in Java</h1><p id="efd98d74-446d-4af2-93a7-29ce797f0d60" class="">If a loop exists inside the body of another loop, it&#x27;s called a nested loop. Here&#x27;s an example of the nested <code>for</code> loop.</p><pre id="b8c0edd7-55c5-4ff7-8a6c-42c17302d003" class="code code-wrap"><code>// outer loop
+for (int i = 1; i &lt;= 5; ++i) {
+  // codes
 
-// print the output
-System.out.println(&quot;This is output&quot;);
-</code></pre><p id="7c88181b-1513-4892-93b4-bb0cb46e9971" class="">Here, we have used the following comments,</p><ul id="ee418929-af0b-433b-9abd-1093a89892b1" class="bulleted-list"><li style="list-style-type:disc">declare and initialize two variables</li></ul><ul id="31d7ddb6-f8e6-461d-a708-200e98e0d5bf" class="bulleted-list"><li style="list-style-type:disc">print the output</li></ul><hr id="a6a0f94b-4479-4eaf-851e-596f6d93e16c"/><h1 id="92ce9982-6bf0-4e2c-84a6-9bf72dcccbce" class="">Types of Comments in Java</h1><p id="109b27ec-97a9-4532-9167-dd0e768dae81" class="">In Java, there are two types of comments:</p><ul id="3f1bf1cb-1a44-4259-9126-959fef5ba91c" class="bulleted-list"><li style="list-style-type:disc">single-line comment</li></ul><ul id="0100ff2b-c1f8-4cc8-8842-dcb38c554e1b" class="bulleted-list"><li style="list-style-type:disc">multi-line comment</li></ul><hr id="cfd34bb9-9724-468d-a9b9-19f138c5b58c"/><h3 id="e9a8df90-f5e6-4a86-af1c-de4458c727f8" class=""><strong>Single-line Comment</strong></h3><p id="b36b471e-c9fd-4a9e-8a16-704562aca8a3" class="">A single-line comment starts and ends in the same line. To write a single-line comment, we can use the <code>//</code> symbol. For example,</p><pre id="65b5bb84-8b33-445b-b4d8-91f6496ac81d" class="code code-wrap"><code>// &quot;Hello, World!&quot; program example
-
-class Main {
-    public static void main(String[] args) {
-        // prints &quot;Hello, World!&quot;
-        System.out.println(&quot;Hello, World!&quot;);
-    }
-}
-</code></pre><p id="96c7cad1-dd0e-485a-af8b-72df4c08b506" class="">
-</p><p id="a10835bc-57c9-420d-b8f5-e367a8fb699f" class=""><strong>Output</strong>:</p><pre id="1907e591-69f2-40ad-b74b-2000305abdfc" class="code code-wrap"><code>Hello, World!
-</code></pre><p id="38def8fe-710e-408a-ac55-66b8010c05eb" class="">Here, we have used two single-line comments:</p><ul id="3b6e86d0-1b3e-42af-98de-5d52f3c0f757" class="bulleted-list"><li style="list-style-type:disc">&quot;Hello, World!&quot; program example</li></ul><ul id="7f98247c-f0ed-4aff-9a7a-303726408041" class="bulleted-list"><li style="list-style-type:disc">prints &quot;Hello World!&quot;</li></ul><p id="6b86533b-ff49-4f92-bd65-4c3b8ed3f6a4" class="">The Java compiler ignores everything from <code>//</code> to the end of line. Hence, it is also known as <strong>End of Line</strong> comment.</p><hr id="d11496e8-97ce-40d1-924d-a8409cb31713"/><h3 id="5999faa3-c53d-40b2-ab74-b7f4554e9fae" class=""><strong>Multi-line Comment</strong></h3><p id="9fd2b241-15ed-48f3-bc91-bd5a00774158" class="">When we want to write comments in multiple lines, we can use the multi-line comment. To write multi-line comments, we can use the /*....*/ symbol. For example,</p><pre id="7a741d57-c250-496e-b394-6d175255d9c5" class="code code-wrap"><code>/* This is an example of  multi-line comment.
- * The program prints &quot;Hello, World!&quot; to the standard output.
- */
-
-class HelloWorld {
-    public static void main(String[] args) {
-
-        System.out.println(&quot;Hello, World!&quot;);
-    }
-}
-</code></pre><p id="dfbf2938-8ae8-4051-a935-1431a931eaad" class="">
-</p><p id="4dec587a-4457-4fe3-a9f0-f7245ab242e4" class=""><strong>Output</strong>:</p><pre id="e9ef73b3-5a2c-40e8-b606-41e9be0cf0bc" class="code code-wrap"><code>Hello, World!
-</code></pre><p id="dc49fbd5-372e-46c4-93c6-6bfaa10e95a1" class="">Here, we have used the multi-line comment:</p><pre id="3d136070-5110-4577-85ce-9017f8d826a0" class="code code-wrap"><code>/* This is an example of multi-line comment.
-* The program prints &quot;Hello, World!&quot; to the standard output.
-*/
-</code></pre><p id="e645e3e6-7558-4847-808f-748b3586f41d" class="">This type of comment is also known as <strong>Traditional Comment</strong>. In this type of comment, the Java compiler ignores everything from <code>/*</code> to <code>*/</code>.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+  // inner loop
+  for(int j = 1; j &lt;=2; ++j) {
+    // codes
+  }
+..
+}</code></pre><p id="01243527-6201-4882-9751-314eb0050322" class="">Here, we are using a <code>for</code> loop inside another <code>for</code> loop.</p><p id="3baebeb4-5cc4-4aa2-868c-7dcd215cbdff" class="">We can use the nested loop to iterate through each day of a week for 3 weeks.</p><p id="64b66f6f-7ac6-46e9-b42f-401b13225a3a" class="">In this case, we can create a loop to iterate three times (3 weeks). And, inside the loop, we can create another loop to iterate 7 times (7 days).</p><p id="79217e5d-54c7-48bc-9e0d-7343c76f6121" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

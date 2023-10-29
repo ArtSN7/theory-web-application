@@ -9,12 +9,6 @@ html {
 	-webkit-print-color-adjust: exact;
 }
 
-.theory{
-	color: rgb(55, 53, 47);
-	display: flex;
-	justify-content: space-between;
-}
-
 html,
 body {
 	margin: 0;
@@ -679,35 +673,69 @@ blockquote {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 	
-</style></head><div class="theory"><a href="/logout">PEVIOUS PAGE</a><a href="/logout">MENU</a><a href="/logout">NEXT PAGE</a></div><body><article id="de158db1-3943-4f34-8c43-fc96a55a30d1" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><h1 id="7bfe3672-6137-4f2e-94dc-b698e9367393" class="">Java Comments</h1><p id="44b2868d-c485-4580-b3d7-d6a2a095ad52" class="">In computer programming, comments are a portion of the program that are completely ignored by Java compilers. They are mainly used to help programmers to understand the code. For example,</p><pre id="a2c724f5-ffb3-49f2-8120-1adbb9bf864a" class="code code-wrap"><code>// declare and initialize two variables
-int a =1;
-int b = 3;
+</style></head><div class="theory"><a href="/logout">PEVIOUS PAGE</a><a href="/logout">MENU</a><a href="/logout">NEXT PAGE</a></div><body><article id="9b863919-c329-45f8-87c9-a932b1afb096" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><p id="0455eb2b-61d1-4bb2-9b75-ea40c2cedecf" class="">
+</p><p id="fe92b3df-d420-4664-9ff9-d51b871cde29" class="">An array is a collection of similar types of data.</p><p id="37868740-50ee-4753-880a-d61bc2668bde" class="">For example, if we want to store the names of 100 people then we can create an array of the string type that can store 100 names.</p><pre id="f1c62edd-83e7-44bb-b237-f081d2722d42" class="code code-wrap"><code>String[] array = new String[100];</code></pre><p id="f552698e-2936-4bf8-9aae-909c18f4fbfa" class="">Here, the above array cannot store more than 100 names. The number of values in a Java array is always fixed.</p><hr id="37b33d9a-c704-4f27-867f-9dafb66d0d68"/><h1 id="f4c14a55-6217-4361-a65b-b0e0cc5fac6d" class="">How to declare an array in Java</h1><p id="a832adba-c2c8-4102-8956-a077e2a3f030" class="">
+</p><p id="f7663268-077a-45f7-81b0-d58041279de1" class="">In Java, here is how we can declare an array.</p><pre id="67f10d88-adfb-4f7a-ac76-ffbaddcc871b" class="code code-wrap"><code>dataType[] arrayName;</code></pre><ul id="0b9fffed-6de5-4e3b-a3ca-c6f610bcdc3c" class="bulleted-list"><li style="list-style-type:disc">dataType - it can be data type like <code>int</code>, <code>char</code>, <code>double</code>, <code>byte</code></li></ul><ul id="ea259167-a9f1-4c0f-9357-37a84cc7d0af" class="bulleted-list"><li style="list-style-type:disc">arrayName - it is an identifier </li></ul><p id="58833323-0de6-41d8-ab17-63bc3b95c520" class="">For example,</p><pre id="9b65124f-aacf-47ed-ad5d-ffa891119255" class="code code-wrap"><code>double[] data;</code></pre><p id="ce6fa70a-d7c3-4235-8f87-7705fadb1cbd" class="">Here, data is an array that can hold values of type <code>double</code>.</p><p id="4f73bfd9-6d27-4b90-be81-f23c762b6ce7" class="">
+</p><p id="f52a60e6-76c2-4eea-bb1b-6c1a6157553e" class="">To define the number of elements that an array can hold, we have to allocate memory for the array in Java. For example,</p><pre id="dc743ed2-ded1-43a3-9386-a406c13f92e2" class="code code-wrap"><code>// declare an array
+double[] data;
 
-// print the output
-System.out.println(&quot;This is output&quot;);
-</code></pre><p id="7c88181b-1513-4892-93b4-bb0cb46e9971" class="">Here, we have used the following comments,</p><ul id="ee418929-af0b-433b-9abd-1093a89892b1" class="bulleted-list"><li style="list-style-type:disc">declare and initialize two variables</li></ul><ul id="31d7ddb6-f8e6-461d-a708-200e98e0d5bf" class="bulleted-list"><li style="list-style-type:disc">print the output</li></ul><hr id="a6a0f94b-4479-4eaf-851e-596f6d93e16c"/><h1 id="92ce9982-6bf0-4e2c-84a6-9bf72dcccbce" class="">Types of Comments in Java</h1><p id="109b27ec-97a9-4532-9167-dd0e768dae81" class="">In Java, there are two types of comments:</p><ul id="3f1bf1cb-1a44-4259-9126-959fef5ba91c" class="bulleted-list"><li style="list-style-type:disc">single-line comment</li></ul><ul id="0100ff2b-c1f8-4cc8-8842-dcb38c554e1b" class="bulleted-list"><li style="list-style-type:disc">multi-line comment</li></ul><hr id="cfd34bb9-9724-468d-a9b9-19f138c5b58c"/><h3 id="e9a8df90-f5e6-4a86-af1c-de4458c727f8" class=""><strong>Single-line Comment</strong></h3><p id="b36b471e-c9fd-4a9e-8a16-704562aca8a3" class="">A single-line comment starts and ends in the same line. To write a single-line comment, we can use the <code>//</code> symbol. For example,</p><pre id="65b5bb84-8b33-445b-b4d8-91f6496ac81d" class="code code-wrap"><code>// &quot;Hello, World!&quot; program example
+// allocate memory
+data = new double[10];</code></pre><p id="3f78d1fe-a05c-4b69-a49b-ccfbf843e996" class="">Here, the array can store <strong>10</strong> elements. We can also say that the <strong>size or length</strong> of the array is 10.</p><p id="33c7e4c7-c7e9-410a-adc6-d1b9a3cb5f24" class="">In Java, we can declare and allocate the memory of an array in one single statement. For example,</p><pre id="38b9b853-e9b7-489e-8e3d-4ecb30719271" class="code code-wrap"><code>double[] data = new double[10];</code></pre><hr id="e8b24f9f-0a84-4e81-80e5-793ba5e0bacd"/><h1 id="68b0dba4-4774-44c3-8156-bca7fff33ac1" class="">How to Initialise Arrays in Java</h1><p id="d4a653c3-44ff-4fc3-bba4-2c7a151c4035" class="">
+</p><p id="213ab1af-a1a2-4d26-b587-c2abba01a4d2" class="">In Java, we can initialise arrays during declaration. For example,</p><pre id="2cafa3ce-0fe8-4f96-a59b-868d37689b67" class="code code-wrap"><code>//declare and initialize and array
+int[] age = {12, 4, 5, 2, 5};</code></pre><p id="68d09739-b4e2-4fbf-b437-8d8d29e716eb" class="">
+</p><p id="d1acb949-5419-4d61-b640-b04c6942cbb2" class="">In the Java array, each memory location is associated with a number. The number is known as an array index. We can also initialise arrays in Java, using the index number. For example,</p><pre id="233823c8-e7ab-4980-a506-d0e9355bd428" class="code code-wrap"><code>// declare an array
+int[] age = new int[5];
 
-class Main {
-    public static void main(String[] args) {
-        // prints &quot;Hello, World!&quot;
-        System.out.println(&quot;Hello, World!&quot;);
-    }
-}
-</code></pre><p id="96c7cad1-dd0e-485a-af8b-72df4c08b506" class="">
-</p><p id="a10835bc-57c9-420d-b8f5-e367a8fb699f" class=""><strong>Output</strong>:</p><pre id="1907e591-69f2-40ad-b74b-2000305abdfc" class="code code-wrap"><code>Hello, World!
-</code></pre><p id="38def8fe-710e-408a-ac55-66b8010c05eb" class="">Here, we have used two single-line comments:</p><ul id="3b6e86d0-1b3e-42af-98de-5d52f3c0f757" class="bulleted-list"><li style="list-style-type:disc">&quot;Hello, World!&quot; program example</li></ul><ul id="7f98247c-f0ed-4aff-9a7a-303726408041" class="bulleted-list"><li style="list-style-type:disc">prints &quot;Hello World!&quot;</li></ul><p id="6b86533b-ff49-4f92-bd65-4c3b8ed3f6a4" class="">The Java compiler ignores everything from <code>//</code> to the end of line. Hence, it is also known as <strong>End of Line</strong> comment.</p><hr id="d11496e8-97ce-40d1-924d-a8409cb31713"/><h3 id="5999faa3-c53d-40b2-ab74-b7f4554e9fae" class=""><strong>Multi-line Comment</strong></h3><p id="9fd2b241-15ed-48f3-bc91-bd5a00774158" class="">When we want to write comments in multiple lines, we can use the multi-line comment. To write multi-line comments, we can use the /*....*/ symbol. For example,</p><pre id="7a741d57-c250-496e-b394-6d175255d9c5" class="code code-wrap"><code>/* This is an example of  multi-line comment.
- * The program prints &quot;Hello, World!&quot; to the standard output.
- */
+// initialize array
+age[0] = 12;
+age[1] = 4;
+age[2] = 5;
+..</code></pre><p id="4729c5f5-d0df-4b27-a4a1-587d35061138" class="">
+</p><figure id="7db43790-1e8e-4cfd-9de9-8eb0672fa578" class="image"><a href="https://cdn.programiz.com/sites/tutorial2program/files/initialize-array-during-declaration-java.jpg"><img style="width:300px" src="https://cdn.programiz.com/sites/tutorial2program/files/initialize-array-during-declaration-java.jpg"/></a></figure><p id="b1338829-39a9-49ba-b82b-f6dbded98c70" class="">
+</p><hr id="325f7535-e285-4bbc-9694-06b041c4a680"/><h1 id="4264baec-2878-4c0b-9c95-f4c71e5d5654" class="">How to Access Elements of an Array in Java?</h1><p id="6b9183cb-9c34-4ffd-bef2-9f69f2fa5605" class="">We can access the element of an array using the index number. Here is the syntax for accessing elements of an array,</p><pre id="6579ef0d-d362-4a00-9e7a-736f0aee3b69" class="code code-wrap"><code>// access array elements
+array[index_of_element]</code></pre><p id="fbcd71c3-bd37-4a21-83b6-f1df26d00f00" class="">
+</p><hr id="fb267767-e379-4ce0-b72d-f3985b18eee5"/><h1 id="d4dc73b6-cad1-4fcd-aa3b-4880b8bf96d0" class="">Looping Through Array Elements</h1><p id="1c513fb7-4510-4c46-9477-6249e6d8ded4" class="">In Java, we can also loop through each element of the array. For example,</p><h3 id="2d65878d-a550-43d8-a1f5-11e87b84a2ac" class=""><strong>Example: Using For Loop</strong></h3><pre id="2cc00b8f-f247-4ea9-83ca-404c3f89d013" class="code code-wrap"><code>class Main {
+ public static void main(String[] args) {
 
-class HelloWorld {
-    public static void main(String[] args) {
+   // create an array
+   int[] age = {12, 4, 5};
 
-        System.out.println(&quot;Hello, World!&quot;);
-    }
-}
-</code></pre><p id="dfbf2938-8ae8-4051-a935-1431a931eaad" class="">
-</p><p id="4dec587a-4457-4fe3-a9f0-f7245ab242e4" class=""><strong>Output</strong>:</p><pre id="e9ef73b3-5a2c-40e8-b606-41e9be0cf0bc" class="code code-wrap"><code>Hello, World!
-</code></pre><p id="dc49fbd5-372e-46c4-93c6-6bfaa10e95a1" class="">Here, we have used the multi-line comment:</p><pre id="3d136070-5110-4577-85ce-9017f8d826a0" class="code code-wrap"><code>/* This is an example of multi-line comment.
-* The program prints &quot;Hello, World!&quot; to the standard output.
-*/
-</code></pre><p id="e645e3e6-7558-4847-808f-748b3586f41d" class="">This type of comment is also known as <strong>Traditional Comment</strong>. In this type of comment, the Java compiler ignores everything from <code>/*</code> to <code>*/</code>.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+   // loop through the array
+   // using for loop
+   System.out.println(&quot;Using for Loop:&quot;);
+   for(int i = 0; i &lt; age.length; i++) {
+     System.out.println(age[i]);
+   }
+ }
+}</code></pre><p id="92f6de43-c53c-4624-8492-539c3ef47ace" class="">
+</p><p id="4aa4161b-15a1-4e53-92a3-8a8447cacdd5" class=""><strong>Output</strong></p><pre id="5ff2a9dc-d88f-44bd-956a-5034ea0a59d1" class="code code-wrap"><code>Using for Loop:
+12
+4
+5</code></pre><p id="e3f8e06e-2725-4093-b2f3-4c0f21901b99" class="">
+</p><p id="2cc29cec-c745-457e-994e-7a1f1d2e8255" class="">In the above example, we are using the for Loop in Java to iterate through each element of the array. Notice the expression inside the loop,</p><p id="973874ac-6f17-44f6-bfe9-ff38b15751b0" class="">
+</p><pre id="1474c4e9-9c4e-4866-9961-1bf7f2f2b9e0" class="code code-wrap"><code>age.length</code></pre><p id="771ddc4d-fb5f-4ef5-baaa-9486bd67b49d" class="">Here, we are using the <code>length</code> property of the array to get the size of the array.</p><p id="d0ef01f1-8fb1-4461-a944-0920d91cb8f0" class="">We can also use the for-each loop to iterate through the elements of an array. For example,</p><h3 id="cb951342-178d-4ec4-9fd7-8098726813c3" class=""><strong>Example: Using the for-each Loop</strong></h3><pre id="4cf46ef6-5a9f-4864-9b62-fab14c736a84" class="code code-wrap"><code>class Main {
+ public static void main(String[] args) {
+
+   // create an array
+   int[] age = {12, 4, 5};
+
+   // loop through the array
+   // using for loop
+   System.out.println(&quot;Using for-each Loop:&quot;);
+   for(int a : age) {
+     System.out.println(a);
+   }
+ }
+}</code></pre><p id="e060d702-cc65-4b2e-b82b-b795c6c11aa9" class=""><strong>Output</strong></p><pre id="455e9cb9-7381-420c-a3bf-63b60add60b7" class="code code-wrap"><code>Using for-each Loop:
+12
+4
+5</code></pre><p id="a7ae57c5-2405-465c-af07-2f3fb6599d14" class="">
+</p><h1 id="0e884a74-e475-4176-b300-965967b28164" class="">Java Multidimensional Arrays</h1><p id="3187b193-96a7-4536-86d1-a62c3e90219a" class="">
+</p><p id="cae588fa-3908-44ac-992d-05a6273c4643" class="">A multidimensional array is an array of arrays. Each element of a multidimensional array is an array itself. For example,</p><pre id="d1406110-2e48-4c7a-8d81-80cec1b95e73" class="code code-wrap"><code>int[][] a = new int[3][4];</code></pre><p id="10cffc16-c1a3-4e81-a5bb-1917ba264337" class="">Here, we have created a multidimensional array named a. It is a 2-dimensional array, that can hold a maximum of 12 elements,</p><figure id="47ac4864-57c6-4d1c-8ecf-fc7c37982d8f" class="image"><a href="https://cdn.programiz.com/sites/tutorial2program/files/java-2d-array.jpg"><img style="width:399px" src="https://cdn.programiz.com/sites/tutorial2program/files/java-2d-array.jpg"/></a></figure><p id="a75d89e4-69c8-4395-9ef7-0311fdfa5557" class="">
+</p><p id="907c92dc-ea60-4c29-bd89-79a5c79a051e" class=""><strong>2-dimensional Array</strong></p><p id="7fc06a47-8df8-4070-a40e-3783f277639d" class="">
+</p><p id="784c43e8-8488-40aa-aaa1-697f772d94a0" class="">Remember, Java uses zero-based indexing, that is, indexing of arrays in Java starts with 0 and not 1.</p><p id="78c59cea-5aac-479e-96d2-b4be1f770a72" class="">Let&#x27;s take another example of the multidimensional array. This time we will be creating a 3-dimensional array. For example,</p><pre id="176e025c-607f-451d-b3bf-638f6514a652" class="code code-wrap"><code>String[][][] data = new String[3][4][2];</code></pre><p id="fef27639-1778-4c74-ac72-db00017b5c8f" class="">Here, data is a 3d array that can hold a maximum of 24 (3*4*2) elements of type <code>String</code>.</p><hr id="d546a9c0-d9dd-4397-a6c1-77b4e69b911e"/><h1 id="8ed3c355-b24d-4ca4-8d63-00fab0d4b103" class="">How to initialise a 2d array in Java?</h1><p id="155857cb-d629-4879-9f8e-5b20325e23f5" class="">Here is how we can initialise a 2-dimensional array in Java.</p><pre id="b47d8221-cfa1-4d97-bffe-d102dd4d3f30" class="code code-wrap"><code>int[][] a = {
+      {1, 2, 3},
+      {4, 5, 6, 9},
+      {7},
+};</code></pre><p id="59fe8ce0-f1a6-407f-8fc4-7568a2609ec2" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -9,12 +9,6 @@ html {
 	-webkit-print-color-adjust: exact;
 }
 
-.theory{
-	color: rgb(55, 53, 47);
-	display: flex;
-	justify-content: space-between;
-}
-
 html,
 body {
 	margin: 0;
@@ -679,35 +673,169 @@ blockquote {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 	
-</style></head><div class="theory"><a href="/logout">PEVIOUS PAGE</a><a href="/logout">MENU</a><a href="/logout">NEXT PAGE</a></div><body><article id="de158db1-3943-4f34-8c43-fc96a55a30d1" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><h1 id="7bfe3672-6137-4f2e-94dc-b698e9367393" class="">Java Comments</h1><p id="44b2868d-c485-4580-b3d7-d6a2a095ad52" class="">In computer programming, comments are a portion of the program that are completely ignored by Java compilers. They are mainly used to help programmers to understand the code. For example,</p><pre id="a2c724f5-ffb3-49f2-8120-1adbb9bf864a" class="code code-wrap"><code>// declare and initialize two variables
-int a =1;
-int b = 3;
+</style></head><div class="theory"><a href="/logout">PEVIOUS PAGE</a><a href="/logout">MENU</a><a href="/logout">NEXT PAGE</a></div><body><article id="14e4b52e-4941-42c0-af52-b86ecf9121d6" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><p id="5ab1b1d6-94c4-4b0a-999a-720a8a0094fa" class="">
+</p><h1 id="3d7911e3-d4e5-49b4-b596-359caee06206" class="">This Keyword</h1><p id="0c3c241c-3412-4a2e-95cb-04ce1406f3cd" class="">
+</p><p id="0f1795cd-42e1-443a-bcd4-283b4e9a0b52" class="">In Java, this keyword is used to refer to the current object inside a method or a constructor. For example,</p><pre id="258a761f-0ddb-4554-85c8-67e91b615977" class="code code-wrap"><code>class Main {
+    int instVar;
 
-// print the output
-System.out.println(&quot;This is output&quot;);
-</code></pre><p id="7c88181b-1513-4892-93b4-bb0cb46e9971" class="">Here, we have used the following comments,</p><ul id="ee418929-af0b-433b-9abd-1093a89892b1" class="bulleted-list"><li style="list-style-type:disc">declare and initialize two variables</li></ul><ul id="31d7ddb6-f8e6-461d-a708-200e98e0d5bf" class="bulleted-list"><li style="list-style-type:disc">print the output</li></ul><hr id="a6a0f94b-4479-4eaf-851e-596f6d93e16c"/><h1 id="92ce9982-6bf0-4e2c-84a6-9bf72dcccbce" class="">Types of Comments in Java</h1><p id="109b27ec-97a9-4532-9167-dd0e768dae81" class="">In Java, there are two types of comments:</p><ul id="3f1bf1cb-1a44-4259-9126-959fef5ba91c" class="bulleted-list"><li style="list-style-type:disc">single-line comment</li></ul><ul id="0100ff2b-c1f8-4cc8-8842-dcb38c554e1b" class="bulleted-list"><li style="list-style-type:disc">multi-line comment</li></ul><hr id="cfd34bb9-9724-468d-a9b9-19f138c5b58c"/><h3 id="e9a8df90-f5e6-4a86-af1c-de4458c727f8" class=""><strong>Single-line Comment</strong></h3><p id="b36b471e-c9fd-4a9e-8a16-704562aca8a3" class="">A single-line comment starts and ends in the same line. To write a single-line comment, we can use the <code>//</code> symbol. For example,</p><pre id="65b5bb84-8b33-445b-b4d8-91f6496ac81d" class="code code-wrap"><code>// &quot;Hello, World!&quot; program example
+    Main(int instVar){
+        this.instVar = instVar;
+        System.out.println(&quot;this reference = &quot; + this);
+    }
+
+    public static void main(String[] args) {
+        Main obj = new Main(8);
+        System.out.println(&quot;object reference = &quot; + obj);
+    }
+}</code></pre><p id="f203ea94-4500-4a22-bf91-824148f5a701" class="">
+</p><p id="46ba5cb1-753f-4a3a-bdde-2ffd51e44430" class=""><strong>Output</strong>:</p><pre id="18ea150e-cd85-4372-bbd0-64847a8d76c4" class="code code-wrap"><code>this reference = Main@23fc625e
+object reference = Main@23fc625e</code></pre><p id="7c5b9cc4-825a-4a3d-983b-865b4817ef53" class="">In the above example, we created an object named obj of the class Main. We then print the reference to the object obj and <code>this</code> keyword of the class.</p><p id="317458f3-94d6-42db-b489-ae2cff5d33ea" class="">Here, we can see that the reference of both obj and <code>this</code> is the same. It means this is nothing but the reference to the current object.</p><hr id="2545a8dd-6722-4d65-9310-171f8c749b9b"/><h1 id="01349ed2-fe83-4b06-ac0b-9db616aef07a" class="">Use of this Keyword</h1><p id="4f2cf1dd-d3e5-4755-81a7-7854ac4ef50e" class="">There are various situations where <code>this</code> keyword is commonly used.</p><h1 id="5b48dd64-5254-4e6f-be5c-6e0189ce1fe4" class="">Using this for Ambiguity Variable Names</h1><p id="ef718a59-17a6-4919-8737-3ec169a05e5d" class="">In Java, it is not allowed to declare two or more variables having the same name inside a scope (class scope or method scope). However, instance variables and parameters may have the same name. For example,</p><pre id="98324fc4-30c5-4af3-9568-de5e3b13c6e2" class="code code-wrap"><code>class MyClass {
+    // instance variable
+    int age;
+
+    // parameter
+    MyClass(int age){
+        age = age;
+    }
+}</code></pre><p id="d275a5c6-012d-4060-910b-01f0cfea70d1" class="">In the above program, the instance variable and the parameter have the same name: age. Here, the Java compiler is confused due to name ambiguity.</p><p id="aed66e2a-d986-4189-949e-d56e8d271664" class="">In such a situation, we use this keyword. For example,</p><p id="5ed8ce2b-13d9-4d4e-8056-da87a8a386da" class="">First, let&#x27;s see an example without using <code>this</code> keyword:</p><pre id="d71963b3-fd48-4039-8022-60c07e4ead72" class="code code-wrap"><code>class Main {
+
+    int age;
+    Main(int age){
+        age = age;
+    }
+
+    public static void main(String[] args) {
+        Main obj = new Main(8);
+        System.out.println(&quot;obj.age = &quot; + obj.age);
+    }
+}</code></pre><p id="b2099036-6db7-4757-8987-942edfd80ffb" class="">
+</p><p id="ec20b423-fb06-4925-b11f-540f945e917b" class=""><strong>Output</strong>:</p><pre id="31cff150-0a05-4f67-b49b-daeb45473be2" class="code code-wrap"><code>obj.age = 0</code></pre><p id="3aafadc9-9436-4893-96d3-6a7f5ed7d12d" class="">In the above example, we have passed <code>8</code> as a value to the constructor. However, we are getting <code>0</code> as an output. This is because the Java compiler gets confused because of the ambiguity in names between instance the variable and the parameter.</p><p id="99168ae6-52d5-42d4-9ec3-7f6540070a5f" class="">Now, let&#x27;s rewrite the above code using <code>this</code> keyword.</p><pre id="12600bfa-f56e-42b9-a6e3-45e83e361f58" class="code code-wrap"><code>class Main {
+
+    int age;
+    Main(int age){
+        this.age = age;
+    }
+
+    public static void main(String[] args) {
+        Main obj = new Main(8);
+        System.out.println(&quot;obj.age = &quot; + obj.age);
+    }
+}</code></pre><p id="abacbeb2-b32c-43f4-a955-6b957c9298e4" class="">
+</p><p id="3fd99fb6-25df-4b8a-a6c3-58de5a996caa" class=""><strong>Output</strong>:</p><pre id="bdd505cf-cb8b-4ff9-a3eb-4946fdadce20" class="code code-wrap"><code>obj.age = 8</code></pre><p id="6b2d0c87-d87a-4501-b8ef-8176bce56f47" class="">Now, we are getting the expected output. It is because when the constructor is called, <code>this</code> inside the constructor is replaced by the object obj that has called the constructor. Hence the age variable is assigned value 8.</p><p id="ed7218d9-1796-4dde-8aa2-828aad460f86" class="">Also, if the name of the parameter and instance variable is different, the compiler automatically appends this keyword. For example, the code:</p><pre id="33b3efbe-d506-41ca-98b2-51a281ba1101" class="code code-wrap"><code>class Main {
+    int age;
+
+    Main(int i) {
+        age = i;
+    }
+}</code></pre><p id="7b3cc4b3-27b5-4841-b7dd-5bb771c5e22e" class="">is equivalent to:</p><pre id="fb853d6f-a728-4049-a652-04616c8c19bb" class="code code-wrap"><code>class Main {
+    int age;
+
+    Main(int i) {
+        this.age = i;
+    }
+}</code></pre><hr id="92c46d20-375f-4629-9f4e-a88d281fe73b"/><h3 id="a67ba4bf-01aa-472f-ba79-d49af476a40c" class="">T<strong>his with Getters and Setters</strong></h3><p id="b5cef919-1352-452d-8d2f-8c0bfa84dd3f" class="">
+</p><p id="68221159-a200-407a-b16b-d518aa002265" class="">Another common use of <code>this</code> keyword is in <em>setters and getters methods</em> of a class. For example:</p><pre id="c5fdc99c-d326-4a4c-b2e4-539e376acfd1" class="code code-wrap"><code>class Main {
+   String name;
+
+   // setter method
+   void setName( String name ) {
+       this.name = name;
+   }
+
+   // getter method
+   String getName(){
+       return this.name;
+   }
+
+   public static void main( String[] args ) {
+       Main obj = new Main();
+
+       // calling the setter and the getter method
+       obj.setName(&quot;Toshiba&quot;);
+       System.out.println(&quot;obj.name: &quot;+obj.getName());
+   }
+}</code></pre><p id="55de5dc8-5524-43fc-a4c5-bab20c4e2969" class="">
+</p><p id="60ef32ba-14b6-4150-808b-da799fcc56ed" class=""><strong>Output</strong>:</p><pre id="526f22a8-ca5e-4c1e-a78d-5810fb5f6138" class="code code-wrap"><code>obj.name: Toshiba</code></pre><p id="0bb29108-d358-4ec4-8493-113284f2fd05" class="">Here, we have used <code>this</code> keyword:</p><ul id="c0621c2f-2ec7-470b-a8ae-9e6bd2a89748" class="bulleted-list"><li style="list-style-type:disc">to assign value inside the setter method</li></ul><ul id="563b2278-30fa-461e-80c8-3f8929b2bf02" class="bulleted-list"><li style="list-style-type:disc">to access value inside the getter method</li></ul><hr id="7be244b2-6371-42b1-b09c-08be7537d53f"/><h1 id="014398b8-ca2e-4a74-8195-350217872bc3" class="">Using this in Constructor Overloading</h1><p id="f5e7cd91-3f86-4661-a932-8d1ce45748e9" class="">While working with <a href="https://www.programiz.com/java-programming/constructors#overloading">constructor overloading</a>, we might have to invoke one constructor from another constructor. In such a case, we cannot call the constructor explicitly. Instead, we have to use <code>this</code> keyword.</p><p id="53e481d9-157f-4ee8-bbbd-5c8d6b8293c1" class="">Here, we use a different form of this keyword. That is, <code>this()</code>. Let&#x27;s take an example,</p><pre id="539fdacf-2d0b-4e53-aa01-2d9a817c7df4" class="code code-wrap"><code>class Complex {
+
+    private int a, b;
+
+    // constructor with 2 parameters
+    private Complex( int i, int j ){
+        this.a = i;
+        this.b = j;
+    }
+
+    // constructor with single parameter
+    private Complex(int i){
+        // invokes the constructor with 2 parameters
+        this(i, i);
+    }
+
+    // constructor with no parameter
+    private Complex(){
+        // invokes the constructor with single parameter
+        this(0);
+    }
+
+    @Override
+    public String toString(){
+        return this.a + &quot; + &quot; + this.b + &quot;i&quot;;
+    }
+
+    public static void main( String[] args ) {
+
+        // creating object of Complex class
+        // calls the constructor with 2 parameters
+        Complex c1 = new Complex(2, 3);
+
+        // calls the constructor with a single parameter
+        Complex c2 = new Complex(3);
+
+        // calls the constructor with no parameters
+        Complex c3 = new Complex();
+
+        // print objects
+        System.out.println(c1);
+        System.out.println(c2);
+        System.out.println(c3);
+    }
+}</code></pre><p id="e5257e1a-87f1-4f52-b606-631409b21fb4" class="">
+</p><p id="f0689fb2-4d9c-4b02-8250-7709ac9e74de" class=""><strong>Output</strong>:</p><pre id="1eee2df2-8fda-4bc6-a74e-18aacec62e23" class="code code-wrap"><code>2 + 3i
+3 + 3i
+0 + 0i</code></pre><p id="b9f0bf24-40f3-498f-a874-5dece38af023" class="">In the above example, we have used <code>this</code> keyword,</p><ul id="c581220a-17a6-4c15-afc2-644b69fb2801" class="bulleted-list"><li style="list-style-type:disc">to call the constructor <code>Complex(int i, int j)</code> from the constructor <code>Complex(int i)</code></li></ul><ul id="a3ba8f36-6ede-48b4-9401-46f4e1263e8b" class="bulleted-list"><li style="list-style-type:disc">to call the constructor <code>Complex(int i)</code> from the constructor <code>Complex()</code></li></ul><p id="8d8f25ab-bdab-4c1a-8855-44cd45f0fcfb" class="">Notice the line,</p><pre id="b9686b65-a5c5-48b1-851b-31b1647b8e62" class="code code-wrap"><code>System.out.println(c1);</code></pre><p id="13c597df-1422-49d6-bc64-5e10f50c4c24" class="">Here, when we print the object c1, the object is converted into a string. In this process, the <code>toString()</code> is called. Since we override the <code>toString()</code> method inside our class, we get the output according to that method.</p><p id="191b7cef-765e-4a85-8100-edb42c38f9d8" class="">One of the huge advantages of <code>this()</code> is to reduce the amount of duplicate code. However, we should be always careful while using <code>this()</code>.</p><p id="2b61c203-ffa5-43df-b12e-dce04ab6cdfc" class="">This is because calling constructor from another constructor adds overhead and it is a slow process. Another huge advantage of using <code>this()</code> is to reduce the amount of duplicate code.</p><p id="c48a0d93-3fcf-4f69-8557-ca02c43e7211" class=""><strong>Note</strong>: Invoking one constructor from another constructor is called explicit constructor invocation.</p><hr id="26a5e8fd-7d5f-47ef-bc69-a598be73b8b8"/><h3 id="a20f35c1-12a2-4ebb-a5ef-e2b0022d3b7f" class=""><strong>Passing this as an Argument</strong></h3><p id="f7b6fc6d-7fef-4ebc-bd4d-c1c62a56b744" class="">We can use <code>this</code> keyword to pass the current object as an argument to a method. For example,</p><pre id="3ddbf2a4-8616-4c9a-896f-1132176ed1d4" class="code code-wrap"><code>class ThisExample {
+    // declare variables
+    int x;
+    int y;
+
+    ThisExample(int x, int y) {
+       // assign values of variables inside constructor
+        this.x = x;
+        this.y = y;
+
+        // value of x and y before calling add()
+        System.out.println(&quot;Before passing this to addTwo() method:&quot;);
+        System.out.println(&quot;x = &quot; + this.x + &quot;, y = &quot; + this.y);
+
+        // call the add() method passing this as argument
+        add(this);
+
+        // value of x and y after calling add()
+        System.out.println(&quot;After passing this to addTwo() method:&quot;);
+        System.out.println(&quot;x = &quot; + this.x + &quot;, y = &quot; + this.y);
+    }
+
+    void add(ThisExample o){
+        o.x += 2;
+        o.y += 2;
+    }
+}
 
 class Main {
-    public static void main(String[] args) {
-        // prints &quot;Hello, World!&quot;
-        System.out.println(&quot;Hello, World!&quot;);
+    public static void main( String[] args ) {
+        ThisExample obj = new ThisExample(1, -2);
     }
-}
-</code></pre><p id="96c7cad1-dd0e-485a-af8b-72df4c08b506" class="">
-</p><p id="a10835bc-57c9-420d-b8f5-e367a8fb699f" class=""><strong>Output</strong>:</p><pre id="1907e591-69f2-40ad-b74b-2000305abdfc" class="code code-wrap"><code>Hello, World!
-</code></pre><p id="38def8fe-710e-408a-ac55-66b8010c05eb" class="">Here, we have used two single-line comments:</p><ul id="3b6e86d0-1b3e-42af-98de-5d52f3c0f757" class="bulleted-list"><li style="list-style-type:disc">&quot;Hello, World!&quot; program example</li></ul><ul id="7f98247c-f0ed-4aff-9a7a-303726408041" class="bulleted-list"><li style="list-style-type:disc">prints &quot;Hello World!&quot;</li></ul><p id="6b86533b-ff49-4f92-bd65-4c3b8ed3f6a4" class="">The Java compiler ignores everything from <code>//</code> to the end of line. Hence, it is also known as <strong>End of Line</strong> comment.</p><hr id="d11496e8-97ce-40d1-924d-a8409cb31713"/><h3 id="5999faa3-c53d-40b2-ab74-b7f4554e9fae" class=""><strong>Multi-line Comment</strong></h3><p id="9fd2b241-15ed-48f3-bc91-bd5a00774158" class="">When we want to write comments in multiple lines, we can use the multi-line comment. To write multi-line comments, we can use the /*....*/ symbol. For example,</p><pre id="7a741d57-c250-496e-b394-6d175255d9c5" class="code code-wrap"><code>/* This is an example of  multi-line comment.
- * The program prints &quot;Hello, World!&quot; to the standard output.
- */
-
-class HelloWorld {
-    public static void main(String[] args) {
-
-        System.out.println(&quot;Hello, World!&quot;);
-    }
-}
-</code></pre><p id="dfbf2938-8ae8-4051-a935-1431a931eaad" class="">
-</p><p id="4dec587a-4457-4fe3-a9f0-f7245ab242e4" class=""><strong>Output</strong>:</p><pre id="e9ef73b3-5a2c-40e8-b606-41e9be0cf0bc" class="code code-wrap"><code>Hello, World!
-</code></pre><p id="dc49fbd5-372e-46c4-93c6-6bfaa10e95a1" class="">Here, we have used the multi-line comment:</p><pre id="3d136070-5110-4577-85ce-9017f8d826a0" class="code code-wrap"><code>/* This is an example of multi-line comment.
-* The program prints &quot;Hello, World!&quot; to the standard output.
-*/
-</code></pre><p id="e645e3e6-7558-4847-808f-748b3586f41d" class="">This type of comment is also known as <strong>Traditional Comment</strong>. In this type of comment, the Java compiler ignores everything from <code>/*</code> to <code>*/</code>.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+}</code></pre><p id="f1e0321b-51c4-45ac-b6c4-7abfdf74bd82" class="">
+</p><p id="7b86168d-b1a7-42c2-958e-5947bce736f9" class=""><strong>Output</strong>:</p><pre id="ff594944-00be-4fde-b295-005fed943711" class="code code-wrap"><code>Before passing this to addTwo() method:
+x = 1, y = -2
+After passing this to addTwo() method:
+x = 3, y = 0</code></pre><p id="bfd18dae-dfc1-46d6-83a8-a0544a5638ab" class="">In the above example, inside the constructor <code>ThisExample()</code>, notice the line,</p><pre id="567c43ba-6c7b-42f3-8279-c6057e4e9c0a" class="code code-wrap"><code>add(this);</code></pre><p id="c9efdcf9-070a-4885-b497-05e41e8646df" class="">Here, we are calling the <code>add()</code> method by passing this as an argument. Since this keyword contains the reference to the object obj of the class, we can change the value of x and y inside the <code>add()</code> method.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

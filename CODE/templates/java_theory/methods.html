@@ -1,0 +1,794 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Untitled</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><div class="theory"><a href="/logout">PEVIOUS PAGE</a><a href="/logout">MENU</a></div><body><article id="d4c8f39b-8ada-4145-b607-65c32361bdfc" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><h1 id="b10e1228-ded2-49ee-b977-00defd94ac39" class="">Java Methods</h1><p id="2410591f-eeb7-4fbf-a824-24df6803324e" class="">
+</p><p id="e6fdd928-5b14-47e6-869b-ab07e7d07f0f" class="">A method is a block of code that performs a specific task.</p><p id="8884e0b6-5d37-45ac-a355-4ad5e3add0fd" class="">Suppose you need to create a program to create a circle and color it. You can create two methods to solve this problem:</p><ul id="eed4a7f9-4a76-4e95-a206-582de6321c33" class="bulleted-list"><li style="list-style-type:disc">a method to draw the circle</li></ul><ul id="f0e11652-a585-4de3-bd4e-9a0446b484dc" class="bulleted-list"><li style="list-style-type:disc">a method to color the circle</li></ul><p id="910a36f6-8a09-416e-ab7f-9d30212759e9" class="">Dividing a complex problem into smaller chunks makes your program easy to understand and reusable.</p><p id="aaa62d63-9aef-4313-9274-6e60011b43e1" class="">In Java, there are two types of methods:</p><ul id="ac29a1b4-8d11-4a37-942a-33b5dd30a337" class="bulleted-list"><li style="list-style-type:disc"><strong>User-defined Methods</strong>: We can create our own method based on our requirements.</li></ul><ul id="432c1043-4479-49bb-a86f-a7312f461a40" class="bulleted-list"><li style="list-style-type:disc"><strong>Standard Library Methods</strong>: These are built-in methods in Java that are available to use.</li></ul><p id="caa54254-cfc3-4210-9c7a-7bc9e47b2ca1" class="">Let&#x27;s first learn about user-defined methods.</p><hr id="0ae20db1-fb9a-44db-b65e-94d441976ca8"/><h1 id="c059a4a1-194f-4cdc-a910-bfb823264c1d" class="">Declaring a Java Method</h1><p id="e4df065e-b70c-4067-8c50-662c45ecd5c0" class="">The syntax to declare a method is:</p><pre id="dfee1824-a7b3-4bc9-a3de-b4315df516d7" class="code code-wrap"><code>returnType methodName() {
+  // method body
+}</code></pre><p id="04cadc27-2a77-4eeb-8cf6-1147fbaad275" class="">Here,</p><ul id="b72833b8-9fd1-47e8-bd36-1004cc40dfcd" class="bulleted-list"><li style="list-style-type:disc"><strong>returnType</strong> - It specifies what type of value a method returns For example if a method has an <code>int</code> return type then it returns an integer value.If the method does not return a value, its return type is <code>void</code>.</li></ul><ul id="a679e5b9-a8bf-429a-8990-85b644c429b9" class="bulleted-list"><li style="list-style-type:disc"><strong>methodName</strong> - It is an <a href="https://www.programiz.com/java-programming/keywords-identifiers#identifiers">identifier</a> that is used to refer to the particular method in a program.</li></ul><ul id="dc3cc8a0-16c3-479c-b068-fce0cb932fc0" class="bulleted-list"><li style="list-style-type:disc"><strong>method body</strong> - It includes the programming statements that are used to perform some tasks. The method body is enclosed inside the curly braces <code>{ }</code>.</li></ul><p id="84425eea-6df8-485f-ae92-b6668e984bad" class="">For example,</p><pre id="2b503079-0537-406a-bb84-13a4da285d5b" class="code code-wrap"><code>int addNumbers() {
+// code
+}</code></pre><p id="22ba217d-148d-4025-a153-9cc6da215b1c" class="">In the above example, the name of the method is <code>adddNumbers()</code>. And, the return type is <code>int</code>. We will learn more about return types later in this tutorial.</p><p id="54599f17-696d-4d9c-bbac-d9917e5d8905" class="">This is the simple syntax of declaring a method. However, the complete syntax of declaring a method is</p><pre id="62f3859c-d240-460d-b72c-05a091666eae" class="code code-wrap"><code>modifier static returnType nameOfMethod (parameter1, parameter2, ...) {
+  // method body
+}</code></pre><p id="40e0b659-76ed-4ebe-87fa-574ac85a3587" class="">Here,</p><ul id="d024710b-353e-4e50-9802-fce27dd60446" class="bulleted-list"><li style="list-style-type:disc"><strong>modifier</strong> - It defines access types whether the method is public, private, and so on. To learn more, visit <a href="https://www.programiz.com/java-programming/access-modifiers">Java Access Specifier</a>.</li></ul><ul id="66e7ebec-13df-4862-879a-51cace9578f9" class="bulleted-list"><li style="list-style-type:disc"><strong>static</strong> - If we use the <code>static</code> keyword, it can be accessed without creating objects.For example, the <code>sqrt()</code> method of standard <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html">Math class</a> is static. Hence, we can directly call <code>Math.sqrt()</code> without creating an instance of <code>Math</code> class.</li></ul><ul id="a44a8109-9247-4c9b-a0fe-79ae30e7effa" class="bulleted-list"><li style="list-style-type:disc"><strong>parameter1/parameter2</strong> - These are values passed to a method. We can pass any number of arguments to a method.</li></ul><hr id="91f4d73b-23d3-443f-9e0a-32bc6d2fb670"/><h1 id="085e7a10-d639-4129-a343-5d3706b66c02" class="">Calling a Method in Java</h1><p id="0779896c-92dc-41de-8d28-6d6b5a2cfd09" class="">In the above example, we have declared a method named <code>addNumbers()</code>. Now, to use the method, we need to call it.</p><p id="af983a56-c269-4dfd-a11c-f46868768d93" class="">Here&#x27;s is how we can call the <code>addNumbers()</code> method.</p><pre id="d0d236de-fe54-437b-8d82-598616093f44" class="code code-wrap"><code>// calls the method
+addNumbers();</code></pre><figure id="42430398-f2fa-4cdf-9d22-155284c1b19b" class="image"><a href="https://cdn.programiz.com/sites/tutorial2program/files/java-method-call.png"><img style="width:420px" src="https://cdn.programiz.com/sites/tutorial2program/files/java-method-call.png"/></a></figure><p id="d71e36d5-b359-41b9-9a37-ad9af8294f18" class=""><strong>Working of Java Method Call</strong></p><hr id="83c014e6-049c-4973-b7a0-b3fa37e7d376"/><h1 id="371ad3c4-a502-403a-822c-ebdd44d42aae" class="">Example 1: Java Methods</h1><pre id="66754615-a650-473c-bea2-f7ebf25052ed" class="code code-wrap"><code>class Main {
+
+  // create a method
+  public int addNumbers(int a, int b) {
+    int sum = a + b;
+    // return value
+    return sum;
+  }
+
+  public static void main(String[] args) {
+
+    int num1 = 25;
+    int num2 = 15;
+
+    // create an object of Main
+    Main obj = new Main();
+    // calling method
+    int result = obj.addNumbers(num1, num2);
+    System.out.println(&quot;Sum is: &quot; + result);
+  }
+}</code></pre><p id="c08c8989-39c3-4239-a14e-f23650ee4c22" class="">
+</p><p id="b25999ec-2b96-460b-8b7a-1e8ec0243b29" class=""><strong>Output</strong></p><pre id="344c90ab-6746-477d-9356-1ae4106b8b21" class="code code-wrap"><code>Sum is: 40</code></pre><p id="a6ec10c6-a9fb-4b35-8efc-06ce6b874c55" class="">In the above example, we have created a method named <code>addNumbers()</code>. The method takes two parameters a and b. Notice the line,</p><pre id="d0ac17fc-bb8c-43ff-9676-b60e2e79e539" class="code code-wrap"><code>int result = obj.addNumbers(num1, num2);</code></pre><p id="7f0bda10-3df1-48d9-b267-d594fbebbcda" class="">Here, we have called the method by passing two arguments num1 and num2. Since the method is returning some value, we have stored the value in the result variable.</p><p id="29e416c9-e2e5-4415-ae80-9ce6c4efcc6a" class=""><strong>Note</strong>: The method is not static. Hence, we are calling the method using the object of the class.</p><hr id="a7239aa2-a6ae-4af6-ab05-05aa00aed87d"/><h1 id="59b9ef6a-2e27-41f2-b123-4b32cc4c133c" class="">Java Method Return Type</h1><p id="ee6831fe-000b-4c29-8ff6-5bef7f75ef66" class="">A Java method may or may not return a value to the function call. We use the <strong>return statement</strong> to return any value. For example,</p><pre id="a2aa0269-2f81-4f95-b95c-b229e5f1ae08" class="code code-wrap"><code>int addNumbers() {
+...
+return sum;
+}</code></pre><p id="d01dbb99-3fe7-4e21-a5e3-023c63f225c8" class="">Here, we are returning the variable sum. Since the return type of the function is <code>int</code>. The sum variable should be of <code>int</code> type. Otherwise, it will generate an error.</p><h3 id="2c7ad43d-0d29-47da-9cd5-44ba35af67aa" class=""><strong>Example 2: Method Return Type</strong></h3><pre id="37298709-340b-4bcd-9f73-1ad8db2723fb" class="code code-wrap"><code>class Main {
+
+// create a method
+  public static int square(int num) {
+
+    // return statement
+    return num * num;
+  }
+
+  public static void main(String[] args) {
+    int result;
+
+    // call the method
+    // store returned value to result
+    result = square(10);
+
+    System.out.println(&quot;Squared value of 10 is: &quot; + result);
+  }
+}</code></pre><p id="1970e276-ce95-4cc6-b208-5c53761f99fd" class="">
+</p><p id="7bb1025b-ab78-4793-a439-a0f0c43b7c16" class=""><strong>Output</strong>:</p><pre id="675cbd1d-3c63-43a4-9e5a-331b66969f95" class="code code-wrap"><code>Squared value of 10 is: 100</code></pre><p id="736cc730-83d9-403e-82f5-645f6099d348" class="">In the above program, we have created a method named <code>square()</code>. The method takes a number as its parameter and returns the square of the number.</p><p id="e3881daa-2b44-47b9-9a4d-8a655f006124" class="">Here, we have mentioned the return type of the method as <code>int</code>. Hence, the method should always return an integer value.</p><figure id="709f6ccb-1fe8-4ff0-838f-d29c2b218054" class="image"><a href="https://cdn.programiz.com/sites/tutorial2program/files/java-method-return-value.png"><img style="width:420px" src="https://cdn.programiz.com/sites/tutorial2program/files/java-method-return-value.png"/></a></figure><p id="04695025-de66-4643-bd1d-6eb091dc2d68" class=""><strong>Representation of the Java method returning a value</strong></p><p id="7e1d6329-04f0-4fc7-95ac-dfbf17031194" class=""><strong>Note</strong>: If the method does not return any value, we use the void keyword as the return type of the method. For example,</p><pre id="066c5efd-4020-4a61-b73b-f558086378ee" class="code code-wrap"><code>public void square(int a) {
+  int square = a * a;
+  System.out.println(&quot;Square is: &quot; + square);
+}</code></pre><hr id="968a9ea7-0dda-43bb-b983-6072030d437b"/><h1 id="8a735e73-a7ad-4f51-8277-647b87becd3f" class="">Method Parameters in Java</h1><p id="6f8aca34-0e58-4194-b9aa-0d578e334232" class="">A method parameter is a value accepted by the method. As mentioned earlier, a method can also have any number of parameters. For example,</p><pre id="f80fcde5-91aa-4c4d-9ff8-9d1edc08cd09" class="code code-wrap"><code>// method with two parameters
+int addNumbers(int a, int b) {
+  // code
+}
+
+// method with no parameter
+int addNumbers(){
+  // code
+}</code></pre><p id="f1f19a31-fe5a-4d04-99a5-f0a9278c6a97" class="">If a method is created with parameters, we need to pass the corresponding values while calling the method. For example,</p><pre id="10b37ef3-9bf2-473d-99b2-4c5231a8de28" class="code code-wrap"><code>// calling the method with two parameters
+addNumbers(25, 15);
+
+// calling the method with no parameters
+addNumbers()</code></pre><hr id="4bffc209-025c-4d4c-8392-aea987beb3aa"/><h3 id="2cd377e2-db14-4101-a00a-3590409a195b" class=""><strong>Example 3: Method Parameters</strong></h3><pre id="ebdfd5d9-ff56-4db2-bee9-371cf1401ebe" class="code code-wrap"><code>class Main {
+
+  // method with no parameter
+  public void display1() {
+    System.out.println(&quot;Method without parameter&quot;);
+  }
+
+  // method with single parameter
+  public void display2(int a) {
+    System.out.println(&quot;Method with a single parameter: &quot; + a);
+  }
+
+  public static void main(String[] args) {
+
+    // create an object of Main
+    Main obj = new Main();
+
+    // calling method with no parameter
+    obj.display1();
+
+    // calling method with the single parameter
+    obj.display2(24);
+  }
+}</code></pre><p id="5e478a1f-b180-4044-a9b1-940071013fc6" class="">
+</p><p id="0ac95102-47ea-4a47-94c2-1a4bbf8e6105" class=""><strong>Output</strong></p><pre id="09024dcf-f019-4ac4-ba5c-6ccd6c1e08aa" class="code code-wrap"><code>Method without parameter
+Method with a single parameter: 24</code></pre><p id="0cb49465-6086-4d66-a653-f7045f6578ab" class="">Here, the parameter of the method is <code>int</code>. Hence, if we pass any other data type instead of <code>int</code>, the compiler will throw an error. It is because Java is a strongly typed language.</p><p id="b1752b3c-4b5f-47e7-b2ad-78a3ea031a22" class=""><strong>Note</strong>: The argument 24 passed to the <code>display2()</code> method during the method call is called the actual argument.</p><p id="9a6db19d-a871-4e54-a137-6c7348bf3960" class="">The parameter num accepted by the method definition is known as a formal argument. We need to specify the type of formal arguments. And, the type of actual arguments and formal arguments should always match.</p><hr id="502580eb-7982-40fb-bbd5-cc6af5114f24"/><h1 id="209d93e9-14d1-4563-b77b-239eb2ec0c8c" class="">Standard Library Methods</h1><p id="697677c2-da32-43bc-a91c-6291c28af1ef" class="">The standard library methods are built-in methods in Java that are readily available for use. These standard libraries come along with the Java Class Library (JCL) in a Java archive (*.jar) file with JVM and JRE.</p><p id="840f8117-3973-4783-befa-d08b2be89803" class="">For example,</p><ul id="0827610c-dea6-4508-a4fc-a9d285163144" class="bulleted-list"><li style="list-style-type:disc"><code>print()</code> is a method of <code>java.io.PrintSteam</code>. The <code>print(&quot;...&quot;)</code> method prints the string inside quotation marks.</li></ul><ul id="9933ccf6-3f86-4d68-82b4-67b47ba3acca" class="bulleted-list"><li style="list-style-type:disc"><code>sqrt()</code> is a method of <code>Math</code> class. It returns the square root of a number.</li></ul><p id="87e3114f-ec97-400a-ab92-3fa7ee2c438d" class="">Here&#x27;s a working example:</p><h3 id="fa4e9cc7-1ea1-468f-83c4-3b9e9a3a729f" class=""><strong>Example 4: Java Standard Library Method</strong></h3><pre id="60764b08-a326-4a31-a113-afebc6b50f62" class="code code-wrap"><code>public class Main {
+  public static void main(String[] args) {
+
+    // using the sqrt() method
+    System.out.print(&quot;Square root of 4 is: &quot; + Math.sqrt(4));
+  }
+}</code></pre><p id="cbfaafd1-e218-47be-b069-6a174f746b4a" class="">
+</p><p id="0bbc4fe7-8974-4899-ac31-4010a82cc6b8" class=""><strong>Output</strong>:</p><pre id="eba87025-f951-43c0-ac8a-22adab57f9d9" class="code code-wrap"><code>Square root of 4 is: 2.0</code></pre><p id="18e68a0d-5c01-4c06-be22-5835c40392a1" class="">To learn more about standard library methods, visit <a href="https://www.programiz.com/java-programming/library">Java Library Methods</a>.</p><hr id="4affb660-fd5b-4d38-800a-ce2ecb4aa179"/><h1 id="22453823-e49b-4996-9087-408e3d12b61f" class="">What are the advantages of using methods?</h1><p id="56310b4b-1a47-421b-a2af-ef656bca957f" class=""><strong>1.</strong> The main advantage is <strong>code reusability</strong>. We can write a method once, and use it multiple times. We do not have to rewrite the entire code each time. Think of it as, &quot;write once, reuse multiple times&quot;.</p><h3 id="04648c75-dad5-4552-b4aa-0bd434c97f88" class=""><strong>Example 5: Java Method for Code Reusability</strong></h3><pre id="b4ef052b-a8e7-41bd-82e9-46943166adea" class="code code-wrap"><code>public class Main {
+
+  // method defined
+  private static int getSquare(int x){
+    return x * x;
+  }
+
+  public static void main(String[] args) {
+    for (int i = 1; i &lt;= 5; i++) {
+
+      // method call
+      int result = getSquare(i);
+      System.out.println(&quot;Square of &quot; + i + &quot; is: &quot; + result);
+    }
+  }
+}</code></pre><p id="62d6eedc-378f-45a9-b21a-9db1422f8ce3" class="">
+</p><p id="fe46f3de-e8ed-4009-89c3-fab66f9464f3" class=""><strong>Output</strong>:</p><pre id="52e1cfa6-b091-4347-b8ed-0d97bd69e8b4" class="code code-wrap"><code>Square of 1 is: 1
+Square of 2 is: 4
+Square of 3 is: 9
+Square of 4 is: 16
+Square of 5 is: 25</code></pre><p id="44189757-3de1-4d18-8d2f-05713af253e0" class="">In the above program, we have created the method named <code>getSquare()</code> to calculate the square of a number. Here, the method is used to calculate the square of numbers less than <strong>6</strong>.</p><p id="e2a18c19-bd3f-4592-b903-0c6c7c0957aa" class="">Hence, the same method is used again and again.</p><p id="5f6a257b-323b-4a91-8308-e37ef0625020" class=""><strong>2.</strong> Methods make code more <strong>readable and easier</strong> to debug. Here, the <code>getSquare()</code>method keeps the code to compute the square in a block. Hence, makes it more readable.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

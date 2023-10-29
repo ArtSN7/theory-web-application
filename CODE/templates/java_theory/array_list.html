@@ -1,0 +1,804 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Untitled</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><div class="theory"><a href="/logout">PEVIOUS PAGE</a><a href="/logout">MENU</a><a href="/logout">NEXT PAGE</a></div><body><article id="bcc6b00d-d637-41fe-ab99-f837a38e35d1" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><h1 id="e1f79b70-c0a5-419a-8356-ec0135a3cdef" class="">Java ArrayList</h1><p id="f41cb8eb-9b36-4a6e-a0dd-ebcc51fd0d0e" class="">
+</p><p id="b9c36cdb-f5c1-41d4-b934-b85193731561" class="">In Java, we use the <code>ArrayList</code> class to implement the functionality of <strong>resizable-arrays</strong>.</p><p id="bc6ab3fe-6c65-4e5f-aa4e-6a0eff76fb7e" class="">It implements the <code>List</code> interface of the collections framework.</p><p id="03c8c6d0-b62a-4717-9e64-17c6274996c2" class="">
+</p><hr id="f985a98c-eb77-40e9-bc7e-d8c18268edba"/><h1 id="65a2be21-e536-4ade-bf0f-5ba12ac3bd27" class="">Java ArrayList Vs Array</h1><p id="0c3800b0-61ce-4675-9e3c-59f467c671b6" class="">
+</p><p id="189fe825-11c5-4285-800a-c62b065c1e8f" class="">In Java, we need to declare the size of an array before we can use it. Once the size of an array is declared, it&#x27;s hard to change it.</p><p id="baf78712-37f8-4060-b1ef-920ac3bd3acb" class="">To handle this issue, we can use the <code>ArrayList</code> class. It allows us to create resizable arrays.</p><p id="41a468d0-0292-4321-bcb9-81b807c793c4" class="">Unlike arrays, arraylists can automatically adjust their capacity when we add or remove elements from them. Hence, arraylists are also known as <strong>dynamic arrays</strong>.</p><hr id="b4e9f018-63a2-4053-924c-05589a5d161c"/><h1 id="490f3f0b-e878-427f-922c-e9b4cfed2283" class="">Creating an ArrayList</h1><p id="5d130794-08e2-4aae-bb8e-6f44dee4e3a6" class="">
+</p><p id="245e784f-aa9d-4a01-a71d-070480cea22d" class="">Before using <code>ArrayList</code>, we need to import the <code>java.util.ArrayList</code> package first. Here is how we can create arraylists in Java:</p><pre id="636b2fa6-0f34-4a1e-aad7-731a3a03026e" class="code code-wrap"><code>ArrayList&lt;Type&gt; NameOfArrayList = new ArrayList&lt;&gt;();</code></pre><p id="de51e5ab-8073-451b-b77a-f0b3e768e87d" class="">Here, Type indicates the type of an arraylist. For example,</p><pre id="27130961-f556-43b4-96ff-ec330e40bb10" class="code code-wrap"><code>// create Integer type arraylist
+ArrayList&lt;Integer&gt; arrayList = new ArrayList&lt;&gt;();
+
+// create String type arraylist
+ArrayList&lt;String&gt; arrayList = new ArrayList&lt;&gt;();</code></pre><p id="0be26212-ed87-4981-bdba-1335a1f3ab9c" class="">In the above program, we have used <code>Integer</code> not int. It is because we cannot use primitive types while creating an arraylist. Instead, we have to use the corresponding wrapper classes.</p><p id="988588b8-c0a5-4d42-a456-c278dea899e0" class="">Here, <code>Integer</code> is the corresponding wrapper class of <code>int</code>. </p><p id="b20465ab-2eef-47f6-8fd5-0f80f53d89d1" class="">
+</p><h1 id="0e440b10-9cdc-456d-9fda-d7ea09c6b9a2" class="">Java Wrapper Class</h1><p id="22c78e38-e8dc-4306-8f1b-d6abfa151022" class="">
+</p><p id="c8576362-d043-497b-aaf3-d2754770cc0c" class="">The wrapper classes in Java are used to convert primitive types (<code>int</code>, <code>char</code>, <code>float</code>, etc) into corresponding objects.</p><p id="80afd60e-4b9b-424b-bc38-41ea3363aad8" class="">Each of the 8 primitive types has corresponding wrapper classes.</p><p id="3957bed4-026f-49d7-8bfa-050a2439a0a7" class="">
+</p><table id="36ac2b29-5b07-48bb-8214-f0af4fc9159c" class="simple-table"><tbody><tr id="3839e9d3-9d5b-4ad1-82f4-65da4456bb94"><td id="aeW}" class="">Primitive Type</td><td id="ehSP" class="">Wrapper Class</td></tr><tr id="0f597b2a-7953-4355-a1f0-a0a1f5963e5b"><td id="aeW}" class=""><code>byte</code></td><td id="ehSP" class=""><code>Byte</code></td></tr><tr id="f441cdc7-b630-4f16-8537-9502497b247d"><td id="aeW}" class=""><code>boolean</code></td><td id="ehSP" class=""><code>Boolean</code></td></tr><tr id="04c1ce97-5821-44b7-8f03-f7d59d4eb74d"><td id="aeW}" class=""><code>char</code></td><td id="ehSP" class=""><code>Character</code></td></tr><tr id="29398b57-9bde-4453-8b99-a41ccaf9a42e"><td id="aeW}" class=""><code>double</code></td><td id="ehSP" class=""><code>Double</code></td></tr><tr id="af7167fa-9def-4ea7-ad76-80e9a8047d44"><td id="aeW}" class=""><code>float</code></td><td id="ehSP" class=""><code>Float</code></td></tr><tr id="739bc206-8a0c-4279-8a97-a3d052946eb8"><td id="aeW}" class=""><code>int</code></td><td id="ehSP" class=""><code>Integer</code></td></tr><tr id="2a8e5b6e-7717-4f9c-b354-5a2e1e701d60"><td id="aeW}" class=""><code>long</code></td><td id="ehSP" class=""><code>Long</code></td></tr><tr id="17f003e1-c940-47c3-90e7-d34fcd492a74"><td id="aeW}" class=""><code>short</code></td><td id="ehSP" class=""><code>Short</code></td></tr></tbody></table><p id="393b19b4-de8e-4270-aa4b-6bf008d60ac3" class="">
+</p><hr id="872188a5-4595-4a28-9ce8-12ee16eec2b9"/><p id="6c3a432c-0dcb-43a3-8469-4d415b64fae8" class="">
+</p><h3 id="e42be59f-da6f-4faa-b5df-3652e5f56b5c" class=""><strong>Example: Create ArrayList in Java</strong></h3><p id="f5a003d2-034a-4d07-85e8-9df104259662" class="">
+</p><pre id="7af7be4e-15d8-4088-bf37-74b03028f56d" class="code code-wrap"><code>import java.util.ArrayList;
+
+class Main {
+  public static void main(String[] args){
+
+    // create ArrayList
+    ArrayList&lt;String&gt; languages = new ArrayList&lt;&gt;();
+
+    // Add elements to ArrayList
+    languages.add(&quot;Java&quot;);
+    languages.add(&quot;Python&quot;);
+    languages.add(&quot;Swift&quot;);
+    System.out.println(&quot;ArrayList: &quot; + languages);
+  }
+}</code></pre><p id="ea1364f7-aac1-46b0-93a6-b458c36fb562" class="">
+</p><p id="f8b8f188-9e7f-423a-8589-d26d20127ffe" class=""><strong>Output</strong></p><pre id="3a5d9207-81cc-43bf-8140-18aa02c28bd8" class="code code-wrap"><code>ArrayList: [Java, Python, Swift]</code></pre><p id="bb9a3eb5-55c5-49b5-a222-629e36e670cc" class="">In the above example, we have created an <code>ArrayList</code> named languages.</p><p id="1f586d93-a97d-4797-a98a-df151b027ea7" class="">Here, we have used the <code>add()</code> method to add elements to the arraylist. We will learn more about the <code>add()</code> method later in this tutorial.</p><hr id="044d716d-05f5-458d-a200-bd7978b59ed3"/><h1 id="3c041b64-9240-4d89-a616-f09f5327f4c7" class="">Basic Operations on ArrayList</h1><p id="cdca3f98-fba2-4493-bf28-772aa6ac49b5" class="">The <code>ArrayList</code> class provides various methods to perform different operations on arraylists. We will look at some commonly used arraylist operations in this tutorial:</p><ul id="b8ed8d1b-5b85-4d3c-bb25-4b672cee70b3" class="bulleted-list"><li style="list-style-type:disc">Add elements</li></ul><ul id="f37453b6-0f41-4f2e-9a8f-d18b7ad502c5" class="bulleted-list"><li style="list-style-type:disc">Access elements</li></ul><ul id="ef74c4b7-a637-423a-991c-77518a165996" class="bulleted-list"><li style="list-style-type:disc">Change elements</li></ul><ul id="870cece5-45a7-4cd4-a5b1-f4f656ed9946" class="bulleted-list"><li style="list-style-type:disc">Remove elements</li></ul><hr id="60c5de0f-d703-4f82-bde8-c78940bb4c53"/><h3 id="2875f3e9-e29d-4ba2-9b93-fffea70fac2b" class=""><strong>1. Add Elements to an ArrayList</strong></h3><p id="200313eb-74e9-44a8-81f8-9bfa8cc3aa6b" class="">To add a single element to the arraylist, we use the <code>add()</code> method of the <code>ArrayList</code> class. For example,</p><pre id="0e64f10a-886b-4424-a098-c6c102872959" class="code code-wrap"><code>import java.util.ArrayList;
+
+class Main {
+  public static void main(String[] args){
+    // create ArrayList
+    ArrayList&lt;String&gt; languages = new ArrayList&lt;&gt;();
+
+    // add() method without the index parameter
+    languages.add(&quot;Java&quot;);
+
+    languages.add(&quot;C&quot;);
+    languages.add(&quot;Python&quot;);
+    System.out.println(&quot;ArrayList: &quot; + languages);
+  }
+}</code></pre><p id="10385580-646f-4cf1-a98f-92dd51c3d628" class="">
+</p><p id="dcc9789f-98ad-4fe7-8efa-76908233296c" class=""><strong>Output</strong></p><pre id="49183226-e081-4598-94d7-1becf0d1088c" class="code code-wrap"><code>ArrayList: [Java, C, Python]</code></pre><p id="17e87dcf-51e9-450f-8ebe-85bd19894645" class="">In the above example, we have created an <code>ArrayList</code> named languages. Here, we have used the <code>add()</code> method to add elements to languages.</p><hr id="785c8b6b-bb9c-452f-b1b6-6a0060a00e62"/><h3 id="9d920ea0-a3f3-42a9-8f69-7570c3543df1" class=""><strong>2. Access ArrayList Elements</strong></h3><p id="4b734867-9c72-419d-b91e-0693c45bf637" class="">To access an element from the arraylist, we use the <code>get()</code> method of the <code>ArrayList</code>class. For example,</p><pre id="63465d33-1626-449c-97e1-2d7d213cd33e" class="code code-wrap"><code>import java.util.ArrayList;
+
+class Main {
+  public static void main(String[] args) {
+    ArrayList&lt;String&gt; animals = new ArrayList&lt;&gt;();
+
+    // add elements in the arraylist
+    animals.add(&quot;Cat&quot;);
+    animals.add(&quot;Dog&quot;);
+    animals.add(&quot;Cow&quot;);
+    System.out.println(&quot;ArrayList: &quot; + animals);
+
+    // get the element from the arraylist
+    String str = animals.get(1);
+
+    System.out.print(&quot;Element at index 1: &quot; + str);
+  }
+}</code></pre><p id="60dfafc6-be87-4113-b744-8dca9aee53cf" class=""><strong>Output</strong></p><pre id="066a6eba-21d4-40bc-8f38-2b7e66f8dd10" class="code code-wrap"><code>ArrayList: [Cat, Dog, Cow]
+Element at index 1: Dog</code></pre><p id="ac394aed-eafc-4113-abdd-e66b666d9256" class="">In the above example, we have used the <code>get()</code> method with parameter 1. Here, the method returns the element at <strong>index 1</strong>.</p><p id="f8c01036-1f6d-4d91-8c71-7363e053920c" class="">We can also access elements of the <code>ArrayList</code> using the <code>iterator()</code> method. </p><hr id="59f5cc7a-6659-4507-8322-802f9fcb1f73"/><h3 id="568bf5b0-8e38-462d-b5fb-ad62ac8c0b78" class=""><strong>3. Change ArrayList Elements</strong></h3><p id="b1b320c9-8d1f-4ed0-bf55-9f1881032bb0" class="">To change elements of the arraylist, we use the <code>set()</code> method of the <code>ArrayList</code> class. For example,</p><pre id="0702fa69-8780-4ce1-bbce-14802a1225de" class="code code-wrap"><code>import java.util.ArrayList;
+
+class Main {
+  public static void main(String[] args) {
+    ArrayList&lt;String&gt; languages = new ArrayList&lt;&gt;();
+
+    // add elements in the array list
+    languages.add(&quot;Java&quot;);
+    languages.add(&quot;Kotlin&quot;);
+    languages.add(&quot;C++&quot;);
+    System.out.println(&quot;ArrayList: &quot; + languages);
+
+    // change the element of the array list
+    languages.set(2, &quot;JavaScript&quot;);
+
+    System.out.println(&quot;Modified ArrayList: &quot; + languages);
+  }
+}</code></pre><p id="c1602188-a237-45e0-a2bf-bbd6fa18e08a" class="">
+</p><p id="2cdd54c7-a415-4eb0-b1a9-5a8267abed51" class=""><strong>Output</strong></p><pre id="3e1e6ad5-d11b-4deb-aee6-5f865b72086d" class="code code-wrap"><code>ArrayList: [Java, Kotlin, C++]
+Modified ArrayList: [Java, Kotlin, JavaScript]</code></pre><p id="591d94c1-8d9c-4eca-a39b-361e9cf6f907" class="">In the above example, we have created an <code>ArrayList</code> named languages. Notice the line,</p><pre id="720e2e31-e7e5-4d8a-adc9-611fa861ce1b" class="code code-wrap"><code>language.set(2, &quot;JavaScript&quot;);</code></pre><p id="2f06113a-c191-43dd-8c59-a6cd2eea421b" class="">Here, the <code>set()</code> method changes the element at <strong>index 2</strong> to JavaScript.</p><p id="a461ab32-0945-4607-9d08-98d9e43e0f0f" class="">To learn more, visit the <a href="https://www.programiz.com/java-programming/library/arraylist/set">Java ArrayList set()</a>.</p><hr id="5368b275-8c6e-4cf0-828f-81fa5d3665b9"/><h3 id="b7d591c1-4b5a-4415-a22f-ceb557d392f6" class=""><strong>4. Remove ArrayList Elements</strong></h3><p id="900ffb8d-c2cc-4749-a91a-22c85dceabd1" class="">To remove an element from the arraylist, we can use the <code>remove()</code> method of the <code>ArrayList</code> class. For example,</p><pre id="2d3378f3-5dff-4ca5-8ea7-76f356ca5ce3" class="code code-wrap"><code>import java.util.ArrayList;
+
+class Main {
+  public static void main(String[] args) {
+    ArrayList&lt;String&gt; animals = new ArrayList&lt;&gt;();
+
+    // add elements in the array list
+    animals.add(&quot;Dog&quot;);
+    animals.add(&quot;Cat&quot;);
+    animals.add(&quot;Horse&quot;);
+    System.out.println(&quot;ArrayList: &quot; + animals);
+
+    // remove element from index 2
+    String str = animals.remove(2);
+
+    System.out.println(&quot;Updated ArrayList: &quot; + animals);
+    System.out.println(&quot;Removed Element: &quot; + str);
+  }
+}</code></pre><p id="29027759-69ef-4102-8ac3-56f881aac3b9" class="">
+</p><p id="56cdc0f9-5262-4b06-8a79-3d8d86e73e77" class=""><strong>Output</strong></p><pre id="3183301d-7f74-4466-8165-c441a3cddf5f" class="code code-wrap"><code>ArrayList: [Dog, Cat, Horse]
+Updated ArrayList: [Dog, Cat]
+Removed Element: Horse</code></pre><p id="3cf20fbf-25cf-49dd-b486-0d06cd68accd" class="">Here, the <code>remove()</code> method takes the <strong>index number</strong> as the parameter. And, removes the element specified by the <strong>index number</strong>.</p><p id="08866b9a-dd73-4774-8519-ae7e0f2ff3eb" class="">To learn more, visit the <a href="https://www.programiz.com/java-programming/library/arraylist/remove">Java ArrayList remove()</a>.</p><p id="1b5d1f35-688e-44f3-acd6-12af8b2b9674" class="">We can also remove all the elements from the arraylist at once. To learn more, visit</p><ul id="9cd7139e-d20b-4dba-9811-d1c45c1636ca" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.programiz.com/java-programming/library/arraylist/removeall">Java ArrayList removeAll()</a></li></ul><ul id="b1a3ab0c-e591-489e-88bb-7dea501c1ad8" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.programiz.com/java-programming/library/arraylist/clear">Java ArrayList clear()</a></li></ul><hr id="d2e39708-1c61-4c27-98f4-08d5b680f2b3"/><h1 id="7d5e2eab-573b-4c9e-92ff-54058ef7cb30" class="">Methods of ArrayList Class</h1><p id="a665a1d2-7238-41c9-9f4a-91a233207e8d" class="">In the previous section, we have learned about the <code>add()</code>, <code>get()</code>, <code>set()</code>, and <code>remove()</code>method of the <code>ArrayList</code> class.</p><p id="f4e35340-0cb2-4443-8d4b-429e83823720" class="">Besides those basic methods, here are some more <code>ArrayList</code> methods that are commonly used.</p><table id="67b98db3-8713-4b9b-8c3e-e91c6798293f" class="simple-table"><tbody><tr id="3ac04077-91e3-4cc2-bb75-9ec110c3753c"><td id="HX?C" class="">Methods</td><td id="dud[" class="">Descriptions</td></tr><tr id="267c2aa3-f6e0-46d1-aef4-5f0a6490914c"><td id="HX?C" class=""><a href="https://www.programiz.com/java-programming/library/arraylist/size">size()</a></td><td id="dud[" class="">Returns the length of the arraylist.</td></tr><tr id="d73afac6-0055-4d80-bf66-ef2601bf76b7"><td id="HX?C" class=""><a href="https://www.programiz.com/java-programming/library/arraylist/sort">sort()</a></td><td id="dud[" class="">Sort the arraylist elements.</td></tr><tr id="7fe4ec32-6a65-4b32-87b7-81e3dd156cf5"><td id="HX?C" class=""><a href="https://www.programiz.com/java-programming/library/arraylist/clone">clone()</a></td><td id="dud[" class="">Creates a new arraylist with the same element, size, and capacity.</td></tr><tr id="01888698-091a-4891-843f-d4810d3a01cf"><td id="HX?C" class=""><a href="https://www.programiz.com/java-programming/library/arraylist/contains">contains()</a></td><td id="dud[" class="">Searches the arraylist for the specified element and returns a boolean result.</td></tr><tr id="2e2694cc-1c3d-4290-ab2d-8b8e731a224b"><td id="HX?C" class=""><a href="https://www.programiz.com/java-programming/library/arraylist/ensurecapacity">ensureCapacity()</a></td><td id="dud[" class="">Specifies the total element the arraylist can contain.</td></tr><tr id="035b7033-3beb-4c4e-9579-7bcfd7773186"><td id="HX?C" class=""><a href="https://www.programiz.com/java-programming/library/arraylist/isempty">isEmpty()</a></td><td id="dud[" class="">Checks if the arraylist is empty.</td></tr><tr id="fc724576-ead6-4932-949c-8687daebe42b"><td id="HX?C" class=""><a href="https://www.programiz.com/java-programming/library/arraylist/indexof">indexOf()</a></td><td id="dud[" class="">Searches a specified element in an arraylist and returns the index of the element.</td></tr></tbody></table><p id="ccc6316d-c513-4b4b-b602-a77543841e66" class="">If you want to learn about all the different methods of arraylist, visit <a href="https://www.programiz.com/java-programming/library/arraylist">Java ArrayList methods</a>.</p><hr id="3b24627b-2c40-4180-bb23-532b3e8881de"/><h1 id="a9d29719-9dba-47eb-925e-ae370754268f" class="">Iterate through an ArrayList</h1><p id="b33556d6-8a26-4746-89e9-03f225877885" class="">
+</p><p id="f9198639-defc-4136-a552-9ac45bbb3d95" class="">We can use the <a href="https://www.programiz.com/java-programming/enhanced-for-loop">Java for-each loop</a> to loop through each element of the arraylist. For example,</p><p id="c855f986-0100-43e0-9b67-e5bf60b036cf" class="">
+</p><pre id="ec03c961-b167-4535-ae6b-294c2d47900e" class="code code-wrap"><code>import java.util.ArrayList;
+
+class Main {
+  public static void main(String[] args) {
+
+    // creating an array list
+    ArrayList&lt;String&gt; animals = new ArrayList&lt;&gt;();
+    animals.add(&quot;Cow&quot;);
+    animals.add(&quot;Cat&quot;);
+    animals.add(&quot;Dog&quot;);
+    System.out.println(&quot;ArrayList: &quot; + animals);
+
+    // iterate using for-each loop
+    System.out.println(&quot;Accessing individual elements:  &quot;);
+
+    for (String language : animals) {
+      System.out.print(language);
+      System.out.print(&quot;, &quot;);
+    }
+
+  }
+}</code></pre><p id="9e82da88-3a59-4e64-aee6-fe3a487dab14" class="">
+</p><p id="a84ae133-5ab8-4bca-ab82-ed1e35d0b0f9" class=""><strong>Output</strong></p><pre id="b40a4d26-b39c-4d6c-a39b-9aa8b680409a" class="code code-wrap"><code>ArrayList: [Cow, Cat, Dog]
+Accessing individual elements:
+Cow, Cat, Dog,</code></pre><p id="46cfff36-74e2-484a-8954-402b4f210366" class="">d</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

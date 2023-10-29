@@ -9,12 +9,6 @@ html {
 	-webkit-print-color-adjust: exact;
 }
 
-.theory{
-	color: rgb(55, 53, 47);
-	display: flex;
-	justify-content: space-between;
-}
-
 html,
 body {
 	margin: 0;
@@ -679,35 +673,46 @@ blockquote {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 	
-</style></head><div class="theory"><a href="/logout">PEVIOUS PAGE</a><a href="/logout">MENU</a><a href="/logout">NEXT PAGE</a></div><body><article id="de158db1-3943-4f34-8c43-fc96a55a30d1" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><h1 id="7bfe3672-6137-4f2e-94dc-b698e9367393" class="">Java Comments</h1><p id="44b2868d-c485-4580-b3d7-d6a2a095ad52" class="">In computer programming, comments are a portion of the program that are completely ignored by Java compilers. They are mainly used to help programmers to understand the code. For example,</p><pre id="a2c724f5-ffb3-49f2-8120-1adbb9bf864a" class="code code-wrap"><code>// declare and initialize two variables
-int a =1;
-int b = 3;
-
-// print the output
-System.out.println(&quot;This is output&quot;);
-</code></pre><p id="7c88181b-1513-4892-93b4-bb0cb46e9971" class="">Here, we have used the following comments,</p><ul id="ee418929-af0b-433b-9abd-1093a89892b1" class="bulleted-list"><li style="list-style-type:disc">declare and initialize two variables</li></ul><ul id="31d7ddb6-f8e6-461d-a708-200e98e0d5bf" class="bulleted-list"><li style="list-style-type:disc">print the output</li></ul><hr id="a6a0f94b-4479-4eaf-851e-596f6d93e16c"/><h1 id="92ce9982-6bf0-4e2c-84a6-9bf72dcccbce" class="">Types of Comments in Java</h1><p id="109b27ec-97a9-4532-9167-dd0e768dae81" class="">In Java, there are two types of comments:</p><ul id="3f1bf1cb-1a44-4259-9126-959fef5ba91c" class="bulleted-list"><li style="list-style-type:disc">single-line comment</li></ul><ul id="0100ff2b-c1f8-4cc8-8842-dcb38c554e1b" class="bulleted-list"><li style="list-style-type:disc">multi-line comment</li></ul><hr id="cfd34bb9-9724-468d-a9b9-19f138c5b58c"/><h3 id="e9a8df90-f5e6-4a86-af1c-de4458c727f8" class=""><strong>Single-line Comment</strong></h3><p id="b36b471e-c9fd-4a9e-8a16-704562aca8a3" class="">A single-line comment starts and ends in the same line. To write a single-line comment, we can use the <code>//</code> symbol. For example,</p><pre id="65b5bb84-8b33-445b-b4d8-91f6496ac81d" class="code code-wrap"><code>// &quot;Hello, World!&quot; program example
+</style></head><div class="theory"><a href="/logout">PEVIOUS PAGE</a><a href="/logout">MENU</a><a href="/logout">NEXT PAGE</a></div><body><article id="2b02f66c-a97d-44c5-ac71-71633610820f" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><h1 id="86327b44-3dca-44f3-aa40-cb141b1fb402" class="">Java for Loop</h1><p id="f4fd3e5c-739a-4e2b-a40c-d7108aadefd8" class="">
+</p><p id="331858ae-961c-419d-8f9c-ffb951116c2b" class="">Java <code>for</code> loop is used to run a block of code for a certain number of times. The syntax of <code>for</code> loop is:</p><p id="9caddc73-aa66-4ca6-bbcf-b624446035d6" class="">
+</p><pre id="41fc3385-89a4-432c-8322-8385fad3ae1a" class="code code-wrap"><code>for (initialExpression; testExpression; updateExpression) {
+    // body of the loop
+}</code></pre><hr id="3310541a-b472-4f84-888f-a21a58dbbf8e"/><figure id="ce309a05-a255-4109-b056-0c8d1f11d184" class="image"><a href="https://cdn.programiz.com/sites/tutorial2program/files/java-for-loop.png"><img style="width:320px" src="https://cdn.programiz.com/sites/tutorial2program/files/java-for-loop.png"/></a></figure><hr id="b98ee04b-bd4f-443d-9212-907f5b9846ad"/><h3 id="ba7f2d67-a65b-4a1e-91c4-ea9518a44301" class=""><strong>Example 1: Display a Text Five Times</strong></h3><pre id="175e4dd7-29a0-453a-93b2-23ad885087d6" class="code code-wrap"><code>// Program to print a text 5 times
 
 class Main {
-    public static void main(String[] args) {
-        // prints &quot;Hello, World!&quot;
-        System.out.println(&quot;Hello, World!&quot;);
-    }
-}
-</code></pre><p id="96c7cad1-dd0e-485a-af8b-72df4c08b506" class="">
-</p><p id="a10835bc-57c9-420d-b8f5-e367a8fb699f" class=""><strong>Output</strong>:</p><pre id="1907e591-69f2-40ad-b74b-2000305abdfc" class="code code-wrap"><code>Hello, World!
-</code></pre><p id="38def8fe-710e-408a-ac55-66b8010c05eb" class="">Here, we have used two single-line comments:</p><ul id="3b6e86d0-1b3e-42af-98de-5d52f3c0f757" class="bulleted-list"><li style="list-style-type:disc">&quot;Hello, World!&quot; program example</li></ul><ul id="7f98247c-f0ed-4aff-9a7a-303726408041" class="bulleted-list"><li style="list-style-type:disc">prints &quot;Hello World!&quot;</li></ul><p id="6b86533b-ff49-4f92-bd65-4c3b8ed3f6a4" class="">The Java compiler ignores everything from <code>//</code> to the end of line. Hence, it is also known as <strong>End of Line</strong> comment.</p><hr id="d11496e8-97ce-40d1-924d-a8409cb31713"/><h3 id="5999faa3-c53d-40b2-ab74-b7f4554e9fae" class=""><strong>Multi-line Comment</strong></h3><p id="9fd2b241-15ed-48f3-bc91-bd5a00774158" class="">When we want to write comments in multiple lines, we can use the multi-line comment. To write multi-line comments, we can use the /*....*/ symbol. For example,</p><pre id="7a741d57-c250-496e-b394-6d175255d9c5" class="code code-wrap"><code>/* This is an example of  multi-line comment.
- * The program prints &quot;Hello, World!&quot; to the standard output.
- */
+  public static void main(String[] args) {
 
-class HelloWorld {
-    public static void main(String[] args) {
-
-        System.out.println(&quot;Hello, World!&quot;);
+    int n = 5;
+    // for loop
+    for (int i = 1; i &lt;= n; i++) {
+      System.out.println(&quot;Java is fun&quot; + i);
     }
+  }
+}</code></pre><p id="300f9cac-7f9a-43f1-b0a8-4d28fa081919" class="">
+</p><p id="be8a4d36-e3cf-480e-b987-eb2cf40be235" class=""><strong>Output</strong></p><pre id="4aeb6363-19b6-49de-a938-55fef3aae129" class="code code-wrap"><code>Java is fun 1
+Java is fun 2
+Java is fun 3 
+Java is fun 4 
+Java is fun 5</code></pre><hr id="1cb20b3b-eb5f-4aef-a52e-a9a6b0d881d6"/><p id="8beb103d-404c-43b9-9e3f-a819b4a57807" class="">
+</p><h1 id="41a6d391-119a-412e-bb63-ad72ad3a7ab0" class="">Java for-each Loop</h1><p id="d2dd5598-2f94-4bc8-b2ff-0b17dbe2c416" class="">The Java for loop has an alternative syntax that makes it easy to iterate through <a href="https://www.programiz.com/java-programming/arrays">arrays</a>and collections. For example,</p><pre id="b96285ca-3159-4b8b-8e3b-5a1ae0470479" class="code code-wrap"><code>// print array elements
+
+class Main {
+  public static void main(String[] args) {
+
+    // create an array
+    int[] numbers = {3, 7, 5, -5};
+
+    // iterating through the array
+    for (int number: numbers) {
+       System.out.println(number);
+    }
+  }
 }
-</code></pre><p id="dfbf2938-8ae8-4051-a935-1431a931eaad" class="">
-</p><p id="4dec587a-4457-4fe3-a9f0-f7245ab242e4" class=""><strong>Output</strong>:</p><pre id="e9ef73b3-5a2c-40e8-b606-41e9be0cf0bc" class="code code-wrap"><code>Hello, World!
-</code></pre><p id="dc49fbd5-372e-46c4-93c6-6bfaa10e95a1" class="">Here, we have used the multi-line comment:</p><pre id="3d136070-5110-4577-85ce-9017f8d826a0" class="code code-wrap"><code>/* This is an example of multi-line comment.
-* The program prints &quot;Hello, World!&quot; to the standard output.
-*/
-</code></pre><p id="e645e3e6-7558-4847-808f-748b3586f41d" class="">This type of comment is also known as <strong>Traditional Comment</strong>. In this type of comment, the Java compiler ignores everything from <code>/*</code> to <code>*/</code>.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+</code></pre><p id="1183d85c-3237-4e7a-9b60-d49a0ebf5aa9" class="">
+</p><p id="0510fdfe-323a-40e5-8200-ab425d296af6" class=""><strong>Output</strong></p><pre id="64c6dcc4-4735-4073-9db4-931cebc9ebf6" class="code code-wrap"><code>3
+7
+5
+-5
+</code></pre><p id="b1889ef7-f33c-42fe-8670-18babc94c601" class="">
+</p><hr id="41394d2d-e7b8-4a9b-bcc5-9899bf1522cf"/><p id="90cc5f6d-9e6d-4a21-9ea7-1bd77db13389" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

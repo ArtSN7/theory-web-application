@@ -9,12 +9,6 @@ html {
 	-webkit-print-color-adjust: exact;
 }
 
-.theory{
-	color: rgb(55, 53, 47);
-	display: flex;
-	justify-content: space-between;
-}
-
 html,
 body {
 	margin: 0;
@@ -679,35 +673,102 @@ blockquote {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 	
-</style></head><div class="theory"><a href="/logout">PEVIOUS PAGE</a><a href="/logout">MENU</a><a href="/logout">NEXT PAGE</a></div><body><article id="de158db1-3943-4f34-8c43-fc96a55a30d1" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><h1 id="7bfe3672-6137-4f2e-94dc-b698e9367393" class="">Java Comments</h1><p id="44b2868d-c485-4580-b3d7-d6a2a095ad52" class="">In computer programming, comments are a portion of the program that are completely ignored by Java compilers. They are mainly used to help programmers to understand the code. For example,</p><pre id="a2c724f5-ffb3-49f2-8120-1adbb9bf864a" class="code code-wrap"><code>// declare and initialize two variables
-int a =1;
-int b = 3;
+</style></head><div class="theory"><a href="/logout">PEVIOUS PAGE</a><a href="/logout">MENU</a><a href="/logout">NEXT PAGE</a></div><body><article id="15709979-caf3-4d17-b101-e73b2bb8e5ce" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><p id="c1d2dbd2-988c-4026-a9f9-0dd10e5850cd" class="">
+</p><h1 id="bc2d9bb9-f668-4733-b56a-e27e91a50282" class="">Java Class and Objects</h1><p id="7455e817-5794-400f-a1f0-09ba19203f1b" class="">
+</p><p id="ec9f997b-bbfa-48eb-bb57-5f1ecfb010f0" class="">Java is an object-oriented programming language. The core concept of the object-oriented approach is to break complex problems into smaller objects.</p><p id="f8214ae6-e8e0-4379-af9b-31cb1b2e3154" class="">
+</p><p id="5600836a-e078-4b32-adee-fc5fcd74133d" class="">An object is any entity that has a <strong>state</strong> and <strong>behavior</strong>. For example, a bicycle is an object. It has</p><ul id="66751d83-0939-4a47-8fc7-0f5b054ad01b" class="bulleted-list"><li style="list-style-type:disc"><strong>States</strong>: idle, first gear, etc</li></ul><ul id="3e8bca62-47ef-4989-b455-eb4988a13ce3" class="bulleted-list"><li style="list-style-type:disc"><strong>Behaviors</strong>: braking, accelerating, etc.</li></ul><p id="9b39886f-4f43-4c68-9c76-0294eaad319a" class="">
+</p><hr id="90e5a9ec-36fc-4568-b650-cbb86ce0a462"/><h1 id="e55823c4-d73c-44de-a345-babea5e9bdee" class="">Java Class</h1><p id="22e02c64-058d-42fe-8501-50c8445bcaaa" class="">A class is a blueprint for the object. Before we create an object, we first need to define the class.</p><p id="44607653-bdcc-44f3-bc32-13fccbd591f1" class="">We can think of the class as a sketch (prototype) of a house. It contains all the details about the floors, doors, windows, etc. Based on these descriptions we build the house. House is the object.</p><p id="3543b009-dc87-4d21-922d-42f4680b6ed9" class="">Since many houses can be made from the same description, we can create many objects from a class.</p><hr id="e8af9e3f-1a4a-4556-ac5b-0ff57c3f09cb"/><h1 id="a7f5d5c4-e129-4409-a56c-fa5e30ee044f" class="">Create a class in Java</h1><p id="4ca6528b-f9ab-40f3-baaf-1df64da0af19" class="">We can create a class in Java using the class keyword. For example,</p><pre id="8fe7eaa2-0238-443a-bfad-0fdc9bcef109" class="code code-wrap"><code>class ClassName {
+  // fields
+  // methods
+}</code></pre><p id="a9542809-7fa6-4527-a181-4ded76014420" class="">Here, fields (variables) and methods represent the <strong>state</strong> and <strong>behavior</strong> of the object respectively.</p><ul id="de1f89fe-64ba-4105-ac94-e00885416f2b" class="bulleted-list"><li style="list-style-type:disc">fields are used to store data</li></ul><ul id="9c626202-516f-459e-96b1-a21e0683024e" class="bulleted-list"><li style="list-style-type:disc">methods are used to perform some operations</li></ul><p id="677f37eb-c68d-43c8-8fa0-a251ea888a5c" class="">For our bicycle object, we can create the class as</p><pre id="b412cb57-a72a-4078-b7c4-f7b6fba571d0" class="code code-wrap"><code>class Bicycle {
 
-// print the output
-System.out.println(&quot;This is output&quot;);
-</code></pre><p id="7c88181b-1513-4892-93b4-bb0cb46e9971" class="">Here, we have used the following comments,</p><ul id="ee418929-af0b-433b-9abd-1093a89892b1" class="bulleted-list"><li style="list-style-type:disc">declare and initialize two variables</li></ul><ul id="31d7ddb6-f8e6-461d-a708-200e98e0d5bf" class="bulleted-list"><li style="list-style-type:disc">print the output</li></ul><hr id="a6a0f94b-4479-4eaf-851e-596f6d93e16c"/><h1 id="92ce9982-6bf0-4e2c-84a6-9bf72dcccbce" class="">Types of Comments in Java</h1><p id="109b27ec-97a9-4532-9167-dd0e768dae81" class="">In Java, there are two types of comments:</p><ul id="3f1bf1cb-1a44-4259-9126-959fef5ba91c" class="bulleted-list"><li style="list-style-type:disc">single-line comment</li></ul><ul id="0100ff2b-c1f8-4cc8-8842-dcb38c554e1b" class="bulleted-list"><li style="list-style-type:disc">multi-line comment</li></ul><hr id="cfd34bb9-9724-468d-a9b9-19f138c5b58c"/><h3 id="e9a8df90-f5e6-4a86-af1c-de4458c727f8" class=""><strong>Single-line Comment</strong></h3><p id="b36b471e-c9fd-4a9e-8a16-704562aca8a3" class="">A single-line comment starts and ends in the same line. To write a single-line comment, we can use the <code>//</code> symbol. For example,</p><pre id="65b5bb84-8b33-445b-b4d8-91f6496ac81d" class="code code-wrap"><code>// &quot;Hello, World!&quot; program example
+  // state or field
+  private int gear = 5;
+
+  // behavior or method
+  public void braking() {
+    System.out.println(&quot;Working of Braking&quot;);
+  }
+}</code></pre><p id="9c601b0a-584b-4a37-933b-ef2e30cf065d" class="">In the above example, we have created a class named Bicycle. It contains a field named gear and a method named braking().</p><p id="2d59b0ec-8122-4eaa-995e-fafabded7279" class="">Here, Bicycle is a prototype. Now, we can create any number of bicycles using the prototype. And, all the bicycles will share the fields and methods of the prototype.</p><p id="c3c2bb64-bd98-41f2-8921-01092a7960ef" class=""><strong>Note</strong>: We have used keywords <code>private</code> (visible only in class) and <code>public</code> (visible everywhere) These are known as access modifiers. </p><hr id="b15ab281-98bc-48a0-a8e4-a2a69911ce99"/><h1 id="bde0f7d7-47c8-4825-9092-8c11f096a883" class="">Java Objects</h1><p id="5fd6226a-cb40-43a6-a728-82b25c7001dc" class="">An object is called an instance of a class. For example, suppose Bicycle is a class then MountainBicycle, SportsBicycle, TouringBicycle, etc can be considered as objects of the class.</p><h3 id="5256138f-f7aa-4a4c-93d9-2e353ecc2f43" class=""><strong>Creating an Object in Java</strong></h3><p id="3f7b28e0-ccd4-491e-ac79-f14ed3ba3722" class="">Here is how we can create an object of a class.</p><pre id="74311435-ed36-4ddb-b7c5-08885b8f7e30" class="code code-wrap"><code>className object = new className();
+
+// for Bicycle class
+Bicycle sportsBicycle = new Bicycle();
+
+Bicycle touringBicycle = new Bicycle();</code></pre><p id="f86fcbfb-1305-4569-9c2f-436c843aecb2" class="">We have used the <code>new</code> keyword along with the constructor of the class to create an object. Constructors are similar to methods and have the same name as the class. For example, <code>Bicycle()</code> is the constructor of the Bicycle class. To learn more, visit <a href="https://www.programiz.com/java-programming/constructors">Java Constructors</a>.</p><p id="414380ca-b57a-464a-9f61-47ea050f40c6" class="">Here, sportsBicycle and touringBicycle are the names of objects. We can use them to access fields and methods of the class.</p><p id="37b70d2c-a9ad-45ee-9e49-b00b968e36f9" class="">As you can see, we have created two objects of the class. We can create multiple objects of a single class in Java.</p><p id="ec48aafe-6ddc-41cc-b65c-12a88b0a4cfc" class=""><strong>Note</strong>: Fields and methods of a class are also called members of the class.</p><hr id="372c738c-6a72-47a8-8a3d-14ab24334eec"/><h1 id="3cfae22c-d372-44f3-9ad6-b9f14f370c62" class="">Access Members of a Class</h1><p id="76f5be7f-13a8-4fc2-b0d0-8cad6b6fffb2" class="">We can use the name of objects along with the <code>.</code> operator to access members of a class. For example,</p><pre id="e6ee2810-7082-42a0-83d6-414a1d117bf2" class="code code-wrap"><code>class Bicycle {
+
+  // field of class
+  int gear = 5;
+
+  // method of class
+  void braking() {
+    ...
+  }
+}
+
+// create object
+Bicycle sportsBicycle = new Bicycle();
+
+// access field and method
+sportsBicycle.gear;
+sportsBicycle.braking();</code></pre><p id="a464aafd-5a0f-43e4-b352-aa90cd87dd42" class="">In the above example, we have created a class named Bicycle. It includes a field named gear and a method named <code>braking()</code>. Notice the statement,</p><pre id="8c03c4cc-b4bc-4f53-9afc-772a553baca7" class="code code-wrap"><code>Bicycle sportsBicycle = new Bicycle();</code></pre><p id="e74fcad8-662a-460a-a3c2-0c606edb7e75" class="">Here, we have created an object of Bicycle named sportsBicycle. We then use the object to access the field and method of the class.</p><ul id="7b375f21-51be-4661-94dc-7dc33d3f13fd" class="bulleted-list"><li style="list-style-type:disc"><strong>sportsBicycle.gear</strong> - access the field<p id="bd6403b3-3645-4ef3-a2ef-592ed8daac84" class="">gear</p></li></ul><ul id="26a3074a-7666-4fda-a3d6-592e30aecf13" class="bulleted-list"><li style="list-style-type:disc"><strong>sportsBicycle.braking()</strong> - access the method <code>braking()</code></li></ul><p id="e8c5fd6e-4c60-46da-83e5-2d7cc8285f82" class="">We have mentioned the word <strong>method</strong> quite a few times. You will learn about <a href="https://www.programiz.com/java-programming/methods">Java methods</a> in detail in the next chapter.</p><p id="32325939-af7d-49f4-8d07-93cfedb51e7b" class="">Now that we understand what is class and object. Let&#x27;s see a fully working example.</p><hr id="5968728a-155c-46b3-ad4c-a35e05261790"/><h1 id="f198dee4-7126-4c95-8e4b-271635ae0771" class=""><mark class="highlight-red">Example: Java Class and Objects</mark></h1><pre id="85f58110-5399-4877-ac21-936adb1551ba" class="code code-wrap"><code>class Lamp {
+
+  // stores the value for light
+  // true if light is on
+  // false if light is off
+  boolean isOn;
+
+  // method to turn on the light
+  void turnOn() {
+    isOn = true;
+    System.out.println(&quot;Light on? &quot; + isOn);
+
+  }
+
+  // method to turnoff the light
+  void turnOff() {
+    isOn = false;
+    System.out.println(&quot;Light on? &quot; + isOn);
+  }
+}
 
 class Main {
-    public static void main(String[] args) {
-        // prints &quot;Hello, World!&quot;
-        System.out.println(&quot;Hello, World!&quot;);
-    }
-}
-</code></pre><p id="96c7cad1-dd0e-485a-af8b-72df4c08b506" class="">
-</p><p id="a10835bc-57c9-420d-b8f5-e367a8fb699f" class=""><strong>Output</strong>:</p><pre id="1907e591-69f2-40ad-b74b-2000305abdfc" class="code code-wrap"><code>Hello, World!
-</code></pre><p id="38def8fe-710e-408a-ac55-66b8010c05eb" class="">Here, we have used two single-line comments:</p><ul id="3b6e86d0-1b3e-42af-98de-5d52f3c0f757" class="bulleted-list"><li style="list-style-type:disc">&quot;Hello, World!&quot; program example</li></ul><ul id="7f98247c-f0ed-4aff-9a7a-303726408041" class="bulleted-list"><li style="list-style-type:disc">prints &quot;Hello World!&quot;</li></ul><p id="6b86533b-ff49-4f92-bd65-4c3b8ed3f6a4" class="">The Java compiler ignores everything from <code>//</code> to the end of line. Hence, it is also known as <strong>End of Line</strong> comment.</p><hr id="d11496e8-97ce-40d1-924d-a8409cb31713"/><h3 id="5999faa3-c53d-40b2-ab74-b7f4554e9fae" class=""><strong>Multi-line Comment</strong></h3><p id="9fd2b241-15ed-48f3-bc91-bd5a00774158" class="">When we want to write comments in multiple lines, we can use the multi-line comment. To write multi-line comments, we can use the /*....*/ symbol. For example,</p><pre id="7a741d57-c250-496e-b394-6d175255d9c5" class="code code-wrap"><code>/* This is an example of  multi-line comment.
- * The program prints &quot;Hello, World!&quot; to the standard output.
- */
+  public static void main(String[] args) {
 
-class HelloWorld {
-    public static void main(String[] args) {
+    // create objects led and halogen
+    Lamp led = new Lamp();
+    Lamp halogen = new Lamp();
 
-        System.out.println(&quot;Hello, World!&quot;);
-    }
-}
-</code></pre><p id="dfbf2938-8ae8-4051-a935-1431a931eaad" class="">
-</p><p id="4dec587a-4457-4fe3-a9f0-f7245ab242e4" class=""><strong>Output</strong>:</p><pre id="e9ef73b3-5a2c-40e8-b606-41e9be0cf0bc" class="code code-wrap"><code>Hello, World!
-</code></pre><p id="dc49fbd5-372e-46c4-93c6-6bfaa10e95a1" class="">Here, we have used the multi-line comment:</p><pre id="3d136070-5110-4577-85ce-9017f8d826a0" class="code code-wrap"><code>/* This is an example of multi-line comment.
-* The program prints &quot;Hello, World!&quot; to the standard output.
-*/
-</code></pre><p id="e645e3e6-7558-4847-808f-748b3586f41d" class="">This type of comment is also known as <strong>Traditional Comment</strong>. In this type of comment, the Java compiler ignores everything from <code>/*</code> to <code>*/</code>.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+    // turn on the light by
+    // calling method turnOn()
+    led.turnOn();
+
+    // turn off the light by
+    // calling method turnOff()
+    halogen.turnOff();
+  }
+}</code></pre><p id="779e5ed5-16c3-42f3-afaf-337dbd147391" class="">
+</p><p id="44277e2b-1d04-41ba-a256-a2d47007cbd8" class=""><strong>Output</strong>:</p><pre id="78f6a649-d223-47aa-bcbf-bdc7a15433df" class="code code-wrap"><code>Light on? true
+Light on? false</code></pre><p id="28f813d8-ad94-4937-88b0-4bdd9ea023cf" class="">In the above program, we have created a class named Lamp. It contains a variable: isOnand two methods: <code>turnOn()</code> and <code>turnOff()</code>.</p><p id="f8748d0f-58e8-42c2-9dd6-eebd97ef4b68" class="">Inside the Main class, we have created two objects: led and halogen of the Lamp class. We then used the objects to call the methods of the class.</p><ul id="66d7afca-e338-4f2a-944e-6e898b3a0efd" class="bulleted-list"><li style="list-style-type:disc"><strong>led.turnOn()</strong> - It sets the  variable to <code>true</code> and prints the output.<p id="dfb782c0-20a7-46e3-b907-151cf5c4b06d" class="">isOn</p></li></ul><ul id="24554837-bf8b-4ffd-b7ad-f819c8b7d2f3" class="bulleted-list"><li style="list-style-type:disc"><strong>halogen.turnOff()</strong> - It sets the  variable to <code>false</code> and prints the output.<p id="d4f5d8a4-f546-47e1-a4ec-805ad5cf139c" class="">isOn</p></li></ul><p id="52aea191-5e88-45a7-8878-4fe392cbd4fb" class="">The variable isOn defined inside the class is also called an instance variable. It is because when we create an object of the class, it is called an instance of the class. And, each instance will have its own copy of the variable.</p><p id="127869b1-c09c-4b5a-84d2-d7a95f32e77c" class="">That is, led and halogen objects will have their own copy of the isOn variable.</p><hr id="89c644d1-81ee-49cf-9c64-0d8460a35f0e"/><h1 id="fa068b6c-7d6e-4378-841a-7b3a5c75198a" class="">Example: Create objects inside the same class</h1><p id="ed2d473a-e433-4917-a0ff-495c18c5e3e4" class="">Note that in the previous example, we have created objects inside another class and accessed the members from that class.</p><p id="2f07c78e-b70a-48dd-a914-e06828812237" class="">However, we can also create objects inside the same class.</p><pre id="e587bb70-3fed-4e41-985d-c4c151716d0e" class="code code-wrap"><code>class Lamp {
+
+  // stores the value for light
+  // true if light is on
+  // false if light is off
+  boolean isOn;
+
+  // method to turn on the light
+  void turnOn() {
+    isOn = true;
+    System.out.println(&quot;Light on? &quot; + isOn);
+
+  }
+
+  public static void main(String[] args) {
+
+    // create an object of Lamp
+    Lamp led = new Lamp();
+
+    // access method using object
+    led.turnOn();
+  }
+}</code></pre><p id="d9dea597-4b01-40b0-ac62-9f9d2f99e81b" class="">
+</p><p id="a8adfd57-1b4a-473a-ab7a-4dbea40c8042" class=""><strong>Output</strong></p><pre id="a2b1245f-8430-4a78-83b9-77c1da80cdee" class="code code-wrap"><code>Light on? true</code></pre><p id="571e4350-e4f7-40f4-93dd-4adf8ae3999e" class="">Here, we are creating the object inside the <code>main()</code> method of the same class.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,830 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Untitled</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><div class="theory"><a href="/logout">PEVIOUS PAGE</a><a href="/logout">MENU</a><a href="/logout">NEXT PAGE</a></div><body><article id="661f84a7-ffd9-4595-8eb6-ddddfae8f985" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><p id="d76341a9-b728-42f7-8f74-b089752fc182" class="">
+</p><h1 id="9e863ace-1da2-4d79-9cfa-de696b2fa233" class="">What is a Constructor?</h1><p id="fc7bb244-0839-450e-b859-c0f1f1df07ec" class="">
+</p><p id="555ffc34-76a2-43a3-8f87-6a272cf96b98" class="">A constructor in Java is similar to a method that is invoked when an object of the class is created.</p><p id="a286ca35-4f50-4ef6-b19a-33660d62d916" class="">Unlike <a href="https://www.programiz.com/java-programming/methods">Java methods</a>, a constructor has the same name as that of the class and does not have any return type. For example,</p><p id="4724cd6d-6a3f-468c-aa53-49dce1b00829" class="">
+</p><pre id="26c6bf5c-e1b3-4a31-a8cf-ce40bba71553" class="code code-wrap"><code>class Test {
+  Test() {
+    // constructor body
+  }
+}</code></pre><p id="6d322d93-d19a-4d88-acc2-471219baa44a" class="">Here, <code>Test()</code> is a constructor. It has the same name as that of the class and doesn&#x27;t have a return type.</p><p id="da11871c-5ed0-41e6-b418-0ab673e37f77" class=""><strong>Recommended Reading:</strong> <a href="https://stackoverflow.com/questions/1788312/why-do-constructors-not-return-values">Why do constructors not return values</a></p><hr id="b0409ccb-4d04-4d62-834e-482ec1f8d046"/><h1 id="0ec191f9-cbde-4ed2-ab85-89ac8c9f6363" class="">Example 1: Java Constructor</h1><pre id="346bfeb9-6460-4136-afd5-32bde5b2fa83" class="code code-wrap"><code>class Main {
+  private String name;
+
+  // constructor
+  Main() {
+    System.out.println(&quot;Constructor Called:&quot;);
+    name = &quot;Programiz&quot;;
+  }
+
+  public static void main(String[] args) {
+
+    // constructor is invoked while
+    // creating an object of the Main class
+    Main obj = new Main();
+    System.out.println(&quot;The name is &quot; + obj.name);
+  }
+}</code></pre><p id="e2deebd7-29ca-4154-8d89-7568a5376fc8" class="">
+</p><p id="a1835f3c-5725-45a7-a7de-306595c8d4eb" class=""><strong>Output</strong>:</p><pre id="bd856f78-c6ff-4c70-9635-9f483e566531" class="code code-wrap"><code>Constructor Called:
+The name is Programiz</code></pre><p id="f7a32826-cf59-4dcc-8717-9b2b81776da8" class="">In the above example, we have created a constructor named <code>Main()</code>. Inside the constructor, we are initializing the value of the name variable.</p><p id="f0bae5ce-c980-4da6-9a99-fe9e0ecd9f0e" class="">Notice the statement of creating an object of the Main class.</p><pre id="c117fba7-3669-4b3c-87f1-821343b6f43d" class="code code-wrap"><code>Main obj = new Main();</code></pre><p id="10102204-daab-4bd3-b455-5499688e5e5f" class="">Here, when the object is created, the <code>Main()</code> constructor is called. And, the value of the name variable is initialized.</p><p id="06b62d91-5bd1-4468-a281-78497306b3f3" class="">Hence, the program prints the value of the name variables as <code>Programiz</code>.</p><hr id="8ccdf27f-cb79-4720-b8ad-7d56e9f55580"/><h3 id="720bfcae-5c1f-4d48-9739-758097f52cc6" class=""><strong>Types of Constructor</strong></h3><p id="97c140a2-d81c-4de1-b71a-5d0567d407d1" class="">In Java, constructors can be divided into 3 types:</p><ol type="1" id="7fef9ec0-973c-4555-a561-5925fe645c5b" class="numbered-list" start="1"><li>No-Arg Constructor</li></ol><ol type="1" id="5f25c7ff-25d0-4522-aced-1a67abbe0309" class="numbered-list" start="2"><li>Parameterized Constructor</li></ol><ol type="1" id="9deb3294-840a-4008-a40a-763b15071018" class="numbered-list" start="3"><li>Default Constructor</li></ol><hr id="e3c12f53-9f3a-4925-90f0-be618d30e53f"/><h1 id="e373d677-41fc-4739-ba53-801dee2ac5e7" class="">1. Java No-Arg Constructors</h1><p id="912bcd51-c2e2-4eac-b63d-4c76bbbacd6d" class="">Similar to methods, a Java constructor may or may not have any parameters (arguments).</p><p id="85e2753f-e6f2-4d27-9c43-08a8611dc2e7" class="">If a constructor does not accept any parameters, it is known as a no-argument constructor. For example,</p><pre id="64618d06-4018-400f-887f-07914c03f734" class="code code-wrap"><code>private Constructor() {
+   // body of the constructor
+}</code></pre><hr id="1750e17e-7f03-4963-be60-bdbbc5ff3964"/><h3 id="64e3491e-8998-42cd-840c-e16494464889" class=""><strong>Example 2: Java private no-arg constructor</strong></h3><p id="e365c7ca-e97b-443b-b57e-b5cb9252f552" class="">
+</p><pre id="760bd877-e545-47f3-948c-a751652dbed7" class="code code-wrap"><code>class Main {
+
+  int i;
+
+  // constructor with no parameter
+  private Main() {
+    i = 5;
+    System.out.println(&quot;Constructor is called&quot;);
+  }
+
+  public static void main(String[] args) {
+
+    // calling the constructor without any parameter
+    Main obj = new Main();
+    System.out.println(&quot;Value of i: &quot; + obj.i);
+  }
+}</code></pre><p id="008aa6ed-01f0-4a8b-bfbd-d5c68461b96a" class="">
+</p><p id="e51f34a1-f5ee-41f7-b336-10db2d0aa592" class=""><strong>Output</strong>:</p><pre id="3eb2de81-23eb-40c9-99bd-9ff2c606fcdb" class="code code-wrap"><code>Constructor is called
+Value of i: 5</code></pre><p id="bb3e81d2-509c-46f6-8ea5-de60ed7722c8" class="">
+</p><p id="c160feaf-53e7-4951-b462-39f9f61f90d5" class="">In the above example, we have created a constructor <code>Main()</code>. Here, the constructor does not accept any parameters. Hence, it is known as a no-arg constructor.</p><p id="aaebe214-6614-4171-91d7-f8373ec671db" class=""><strong>Notice that we have declared the constructor as private.</strong></p><p id="beab8536-a2a2-4206-b0ae-62c759a79f49" class="">Once a constructor is declared <code>private</code>, it cannot be accessed from outside the class. So, creating objects from outside the class is prohibited using the private constructor.</p><p id="d366d3d2-a336-4503-9ccb-422e1e3b63a0" class="">Here, we are creating the object inside the same class. Hence, the program is able to access the constructor. To learn more, visit <a href="https://www.programiz.com/java-programming/examples/private-constructor-implementation">Java Implement Private Constructor</a>.</p><p id="0d219d46-dabc-47b4-97c2-cdeb13ee32ec" class="">However, if we want to create objects outside the class, then we need to declare the constructor as <code>public</code>.</p><h3 id="6bcb8eb8-28c4-4afc-883d-32dbe33bf9ec" class=""><strong>Example 3: Java public no-arg constructors</strong></h3><p id="4a9014aa-8cf7-4cd8-a56e-0d3919a4da5a" class="">
+</p><pre id="4e4b3edd-ef97-49dc-87f6-d5697756d4b0" class="code code-wrap"><code>class Company {
+  String name;
+
+  // public constructor
+  public Company() {
+    name = &quot;Programiz&quot;;
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+
+    // object is created in another class
+    Company obj = new Company();
+    System.out.println(&quot;Company name = &quot; + obj.name);
+  }
+}</code></pre><p id="81f565cf-c75e-41b3-8344-3984ceb880b0" class="">
+</p><p id="be73b2c6-d763-405f-bfc1-76bd6b79286d" class=""><strong>Output</strong>:</p><pre id="d88de76f-a871-4507-859d-1b6c30f22ba5" class="code code-wrap"><code>Company name = Programiz</code></pre><p id="9c90c3da-c35a-4dd8-a99a-75ebb8cb8fb7" class="">
+</p><hr id="3d838dff-a36c-44f0-946e-6b78cab85e90"/><h1 id="d960c57a-3129-48ea-94cf-578f781358cf" class="">2. <mark class="highlight-red">Java Parameterized Constructor</mark></h1><p id="42bade93-c023-4fa0-8f75-bbf647e60e9a" class="">A Java constructor can also accept one or more parameters. Such constructors are known as parameterized constructors (constructor with parameters).</p><h3 id="f160fc69-be26-470c-aac6-9d7a61167378" class=""><strong>Example 4: Parameterized constructor</strong></h3><pre id="f5e73720-3218-403b-aa68-c35265409567" class="code code-wrap"><code>class Main {
+
+  String languages;
+
+  // constructor accepting single value
+  Main(String lang) {
+    languages = lang;
+    System.out.println(languages + &quot; Programming Language&quot;);
+  }
+
+  public static void main(String[] args) {
+
+    // call constructor by passing a single value
+    Main obj1 = new Main(&quot;Java&quot;);
+    Main obj2 = new Main(&quot;Python&quot;);
+    Main obj3 = new Main(&quot;C&quot;);
+  }
+}</code></pre><p id="931529eb-d236-4de0-a085-900fb9e63a66" class="">
+</p><p id="3d795186-1d01-404e-bbe5-ed6848fe6453" class=""><strong>Output</strong>:</p><pre id="23d59560-f36d-4b18-852f-58423deb991b" class="code code-wrap"><code>Java Programming Language
+Python Programming Language
+C Programming Language</code></pre><p id="853d6662-e917-4ee3-bb73-81d9e091e6b8" class="">
+</p><p id="f94dc85e-3b44-49e0-a412-3e439392178a" class="">In the above example, we have created a constructor named <code>Main()</code>. Here, the constructor takes a single parameter. Notice the expression,</p><pre id="fac5b9d8-de26-4bb9-b83b-065e283e78d3" class="code code-wrap"><code>Main obj1 = new Main(&quot;Java&quot;);</code></pre><p id="12c9686f-e02f-458d-8d30-8aaef3424966" class="">Here, we are passing the single value to the constructor. Based on the argument passed, the language variable is initialized inside the constructor.</p><hr id="c6b5e19d-c6e3-440a-a81c-f6054955c590"/><h1 id="1c881262-079c-4b4f-bf38-c06a6aacb36e" class="">3. Java Default Constructor</h1><p id="89484c7a-b422-4a63-8db7-f8a9667ae99f" class="">If we do not create any constructor, the Java compiler automatically create a no-arg constructor during the execution of the program. This constructor is called default constructor.</p><h3 id="f59cfe9f-da5a-4c05-bff6-71c8f38139eb" class=""><strong>Example 5: Default Constructor</strong></h3><pre id="1d92be34-bdb8-438e-89be-3a42f5b4a2d4" class="code code-wrap"><code>class Main {
+
+  int a;
+  boolean b;
+
+  public static void main(String[] args) {
+
+    // A default constructor is called
+    Main obj = new Main();
+
+    System.out.println(&quot;Default Value:&quot;);
+    System.out.println(&quot;a = &quot; + obj.a);
+    System.out.println(&quot;b = &quot; + obj.b);
+  }
+}</code></pre><p id="02e56499-7335-480e-af50-170bb997af6e" class="">
+</p><p id="b9589e77-8769-4083-a944-885a447086a3" class=""><strong>Output</strong>:</p><pre id="58e71651-b3e8-49c0-8c45-ad8e3f273bdc" class="code code-wrap"><code>Default Value:
+a = 0
+b = false</code></pre><p id="241a8406-8d38-4159-a843-6dbdfcb7f997" class="">Here, we haven&#x27;t created any constructors. Hence, the Java compiler automatically creates the default constructor.</p><p id="12dd838a-17b3-4936-a617-4050271f4df9" class="">The default constructor initializes any uninitialized instance variables with default values.</p><table id="1a6c5db5-69ef-44bf-b84f-aefc1a4a10ac" class="simple-table"><tbody><tr id="784f24b8-83b8-4290-85a5-bc59c6cad00d"><td id="kS_{" class="">Type</td><td id="idZR" class="">Default Value</td></tr><tr id="dfbb7ec3-9265-4617-a6c9-b0fc34bdd8e1"><td id="kS_{" class=""><code>boolean</code></td><td id="idZR" class="">false</td></tr><tr id="efdb8754-c3cc-4d8f-828b-51706204114f"><td id="kS_{" class=""><code>byte</code></td><td id="idZR" class="">0</td></tr><tr id="84629d32-216b-44a0-ba75-e26e111316ee"><td id="kS_{" class=""><code>short</code></td><td id="idZR" class="">0</td></tr><tr id="2851fea9-22dc-4f38-af13-f719d4316f3e"><td id="kS_{" class=""><code>int</code></td><td id="idZR" class="">0</td></tr><tr id="54fc44a3-9923-4a1d-a51e-5acb94f36079"><td id="kS_{" class=""><code>long</code></td><td id="idZR" class="">0L</td></tr><tr id="aad54307-b74d-4459-b2a8-30ec7a448bbe"><td id="kS_{" class=""><code>char</code></td><td id="idZR" class="">\u0000</td></tr><tr id="31d937e0-bf9f-4604-892d-08634418a137"><td id="kS_{" class=""><code>float</code></td><td id="idZR" class="">0.0f</td></tr><tr id="86c06d4a-744f-4233-87c4-0a0a8dd1b05b"><td id="kS_{" class=""><code>double</code></td><td id="idZR" class="">0.0d</td></tr><tr id="b671c875-3171-42cd-895d-3073074f6cc9"><td id="kS_{" class=""><code>object</code></td><td id="idZR" class="">Reference null</td></tr></tbody></table><p id="6bf9ece7-0626-447a-a484-368fbdfa0276" class="">In the above program, the variables a and b are initialized with default value <strong>0</strong> and <code>false</code> respectively.</p><p id="077222c1-a380-41a4-971e-6d5a365b5a34" class="">The above program is equivalent to:</p><pre id="e90fd101-34f1-4cb9-a8a2-17c8d308edb2" class="code code-wrap"><code>class Main {
+
+  int a;
+  boolean b;
+
+   Main() {
+    a = 0;
+    b = false;
+  }
+
+  public static void main(String[] args) {
+    // call the constructor
+    Main obj = new Main();
+
+    System.out.println(&quot;Default Value:&quot;);
+    System.out.println(&quot;a = &quot; + obj.a);
+    System.out.println(&quot;b = &quot; + obj.b);
+  }
+}</code></pre><p id="e88cec9b-40c5-4fb4-86f7-947f3916ed2f" class="">
+</p><p id="e6c926f1-24a7-4d30-ac94-9271533ee757" class=""><strong>The output of the program is the same as Example 5.</strong></p><hr id="e036444c-8777-4242-adb0-24be783815ec"/><h1 id="00d9e457-489a-469e-8125-7f3de7c26b29" class="">Important Notes on Java Constructors</h1><ul id="3ed4eb8d-4704-43ce-8e35-8856380c550c" class="bulleted-list"><li style="list-style-type:disc">Constructors are invoked implicitly when you instantiate objects.</li></ul><ul id="76fb4bcd-3e36-4a1b-8e5d-32c3db616e54" class="bulleted-list"><li style="list-style-type:disc">The two rules for creating a constructor are:The name of the constructor should be the same as the class.A Java constructor must not have a return type.</li></ul><ul id="25e02a7b-bf3e-4b66-a7ea-6aaddccb1510" class="bulleted-list"><li style="list-style-type:disc">If a class doesn&#x27;t have a constructor, the Java compiler automatically creates a <strong>default constructor</strong> during run-time. The default constructor initializes instance variables with default values. For example, the <code>int</code> variable will be initialized to <code>0</code></li></ul><ul id="be75b1c6-d724-4ecb-8371-c1721b4b62e4" class="bulleted-list"><li style="list-style-type:disc">Constructor types:<strong>No-Arg Constructor</strong> - a constructor that does not accept any arguments<strong>Parameterized constructor</strong> - a constructor that accepts arguments<strong>Default Constructor</strong> - a constructor that is automatically created by the Java compiler if it is not explicitly defined.</li></ul><ul id="1b21d6cd-0d5c-4206-be7c-c4ba299d5771" class="bulleted-list"><li style="list-style-type:disc">A constructor cannot be <code>abstract</code> or <code>static</code> or <code>final</code>.</li></ul><ul id="7e6f3b45-f348-405f-93ab-88b27428e2b6" class="bulleted-list"><li style="list-style-type:disc">A constructor can be overloaded but can not be overridden.</li></ul><hr id="d7bb078f-7e77-4b2a-8718-f8bb964f4cef"/><h1 id="9bb98c91-df65-429f-8059-07dbbe7b497a" class="">Constructors Overloading in Java</h1><p id="06846882-4f10-4c11-84db-d873678cb950" class="">Similar to <a href="https://www.programiz.com/java-programming/method-overloading">Java method overloading</a>, we can also create two or more constructors with different parameters. This is called constructors overloading.</p><h3 id="9acf26cc-5378-49bb-8d32-09f9f87ab947" class=""><strong>Example 6: Java Constructor Overloading</strong></h3><pre id="53f5efb5-f394-4032-b2da-5c3263792e08" class="code code-wrap"><code>class Main {
+
+  String language;
+
+  // constructor with no parameter
+  Main() {
+    this.language = &quot;Java&quot;;
+  }
+
+  // constructor with a single parameter
+  Main(String language) {
+    this.language = language;
+  }
+
+  public void getName() {
+    System.out.println(&quot;Programming Langauage: &quot; + this.language);
+  }
+
+  public static void main(String[] args) {
+
+    // call constructor with no parameter
+    Main obj1 = new Main();
+
+    // call constructor with a single parameter
+    Main obj2 = new Main(&quot;Python&quot;);
+
+    obj1.getName();
+    obj2.getName();
+  }
+}</code></pre><p id="3c63212e-1436-4add-9d6f-34cc15fe2394" class="">
+</p><p id="f1d6b30c-d8ad-4cf1-9ff5-170b71887b75" class=""><strong>Output</strong>:</p><pre id="67f52655-eb49-491c-a0ee-cf480c32a514" class="code code-wrap"><code>Programming Language: Java
+Programming Language: Python</code></pre><p id="4c8d177e-cc44-4672-9656-97b61cddea4e" class="">In the above example, we have two constructors: <code>Main()</code> and <code>Main(String language)</code>. Here, both the constructor initialize the value of the variable language with different values.</p><p id="5e5f97a6-1456-4c00-adf4-f1000bed001a" class="">Based on the parameter passed during object creation, different constructors are called and different values are assigned.</p><p id="f11006fa-092a-4bb5-b83a-eaacb051c0a3" class="">It is also possible to call one constructor from another constructor. To learn more, visit <a href="https://www.programiz.com/java-programming/examples/call-one-constructor-from-another">Java Call One Constructor from Another</a>.</p><p id="d76940f0-27bf-4dd3-8a8b-efc1b6ac7fb9" class=""><strong>Note</strong>: We have used <code>this</code> keyword to specify the variable of the class. To know more about <code>this</code> keyword, visit <a href="https://www.programiz.com/java-programming/this-keyword">Java this keyword</a>.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

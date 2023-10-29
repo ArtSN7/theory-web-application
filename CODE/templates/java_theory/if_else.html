@@ -9,12 +9,6 @@ html {
 	-webkit-print-color-adjust: exact;
 }
 
-.theory{
-	color: rgb(55, 53, 47);
-	display: flex;
-	justify-content: space-between;
-}
-
 html,
 body {
 	margin: 0;
@@ -679,35 +673,59 @@ blockquote {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 	
-</style></head><div class="theory"><a href="/logout">PEVIOUS PAGE</a><a href="/logout">MENU</a><a href="/logout">NEXT PAGE</a></div><body><article id="de158db1-3943-4f34-8c43-fc96a55a30d1" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><h1 id="7bfe3672-6137-4f2e-94dc-b698e9367393" class="">Java Comments</h1><p id="44b2868d-c485-4580-b3d7-d6a2a095ad52" class="">In computer programming, comments are a portion of the program that are completely ignored by Java compilers. They are mainly used to help programmers to understand the code. For example,</p><pre id="a2c724f5-ffb3-49f2-8120-1adbb9bf864a" class="code code-wrap"><code>// declare and initialize two variables
-int a =1;
-int b = 3;
+</style></head><div class="theory"><a href="/logout">PEVIOUS PAGE</a><a href="/logout">MENU</a><a href="/logout">NEXT PAGE</a></div><body><article id="e2c7ba19-dd52-46cd-92e9-6a97fb7d8dde" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><h1 id="c60f8325-1ef5-4f17-b400-5951e1e75124" class="">1. Java if (if-then) Statement</h1><p id="2e718fd9-8acf-4fcf-94fe-c65a829a0cc1" class="">The syntax of an <strong>if-then</strong> statement is:</p><pre id="23ea03aa-d7f5-45b9-8760-36a09228b13a" class="code code-wrap"><code>if (condition) {
+  // statements
+}</code></pre><p id="e32983f7-1210-4de9-9e08-478a8b11a94d" class="">Here, condition is a boolean expression such as <code>age &gt;= 18</code>.</p><ul id="edfddf1d-2f81-40c3-8411-f5b967e6680d" class="bulleted-list"><li style="list-style-type:disc">if  evaluates to <code>true</code>, statements are executed<p id="dc08981f-2b52-44b5-84e3-60fe037bd331" class="">condition</p></li></ul><ul id="ac40d0a0-053b-490d-9b0f-d7f3347f88eb" class="bulleted-list"><li style="list-style-type:disc">if  evaluates to <code>false</code>, statements are skipped<p id="8e9a01ea-7744-43b1-bf3a-56434442d288" class="">condition</p></li></ul><p id="3a442905-22f2-4572-b8e8-feb447799df9" class="">
+</p><hr id="e6b74789-4206-4cf9-99ee-86b6aa48d64b"/><h3 id="9812c0e0-30d1-4a3e-b97a-30ba5e8c2710" class=""><strong>Example:</strong></h3><pre id="6ab6def5-8d0d-4665-9c4f-70d52eb3304b" class="code code-wrap"><code>class IfStatement {
+  public static void main(String[] args) {
 
-// print the output
-System.out.println(&quot;This is output&quot;);
-</code></pre><p id="7c88181b-1513-4892-93b4-bb0cb46e9971" class="">Here, we have used the following comments,</p><ul id="ee418929-af0b-433b-9abd-1093a89892b1" class="bulleted-list"><li style="list-style-type:disc">declare and initialize two variables</li></ul><ul id="31d7ddb6-f8e6-461d-a708-200e98e0d5bf" class="bulleted-list"><li style="list-style-type:disc">print the output</li></ul><hr id="a6a0f94b-4479-4eaf-851e-596f6d93e16c"/><h1 id="92ce9982-6bf0-4e2c-84a6-9bf72dcccbce" class="">Types of Comments in Java</h1><p id="109b27ec-97a9-4532-9167-dd0e768dae81" class="">In Java, there are two types of comments:</p><ul id="3f1bf1cb-1a44-4259-9126-959fef5ba91c" class="bulleted-list"><li style="list-style-type:disc">single-line comment</li></ul><ul id="0100ff2b-c1f8-4cc8-8842-dcb38c554e1b" class="bulleted-list"><li style="list-style-type:disc">multi-line comment</li></ul><hr id="cfd34bb9-9724-468d-a9b9-19f138c5b58c"/><h3 id="e9a8df90-f5e6-4a86-af1c-de4458c727f8" class=""><strong>Single-line Comment</strong></h3><p id="b36b471e-c9fd-4a9e-8a16-704562aca8a3" class="">A single-line comment starts and ends in the same line. To write a single-line comment, we can use the <code>//</code> symbol. For example,</p><pre id="65b5bb84-8b33-445b-b4d8-91f6496ac81d" class="code code-wrap"><code>// &quot;Hello, World!&quot; program example
+    int number = 10;
 
-class Main {
-    public static void main(String[] args) {
-        // prints &quot;Hello, World!&quot;
-        System.out.println(&quot;Hello, World!&quot;);
+    // checks if number is less than 0
+    if (number &lt; 0) {
+      System.out.println(&quot;The number is negative.&quot;);
     }
+
+    System.out.println(&quot;Statement outside if block&quot;);
+  }
+}</code></pre><p id="24a659a9-1ee5-4979-ab40-bf7e074beced" class=""><strong>Output</strong></p><pre id="e9a8c7f1-018e-4ed2-80c2-ea8cd92d5122" class="code code-wrap"><code>Statement outside if block</code></pre><hr id="0cffec74-1509-41df-9ea3-63649e7e6338"/><h1 id="441f8b66-deae-4a5a-ac3b-b1fd0239a606" class="">2. Java if...else (if-then-else) Statement</h1><p id="b4ef1153-0ec7-4f29-8216-977f5dd14fc2" class="">The <code>if</code> statement executes a certain section of code if the test expression is evaluated to <code>true</code>. However, if the test expression is evaluated to <code>false</code>, it does nothing.</p><p id="9a189d68-d212-4345-a7db-02fd724af759" class="">In this case, we can use an optional <code>else</code> block. Statements inside the body of <code>else</code>block are executed if the test expression is evaluated to <code>false</code>. This is known as the <strong>if-...else</strong> statement in Java.</p><p id="243c3922-f633-4163-a542-d20110942588" class="">The syntax of the <strong>if...else</strong> statement is:</p><p id="7bdf3f08-a6ab-4459-b839-a0ef2c23b9ad" class="">
+</p><pre id="aa1030e7-10be-4269-8c2b-625dedaf8256" class="code code-wrap"><code>if (condition) {
+  // codes in if block
 }
-</code></pre><p id="96c7cad1-dd0e-485a-af8b-72df4c08b506" class="">
-</p><p id="a10835bc-57c9-420d-b8f5-e367a8fb699f" class=""><strong>Output</strong>:</p><pre id="1907e591-69f2-40ad-b74b-2000305abdfc" class="code code-wrap"><code>Hello, World!
-</code></pre><p id="38def8fe-710e-408a-ac55-66b8010c05eb" class="">Here, we have used two single-line comments:</p><ul id="3b6e86d0-1b3e-42af-98de-5d52f3c0f757" class="bulleted-list"><li style="list-style-type:disc">&quot;Hello, World!&quot; program example</li></ul><ul id="7f98247c-f0ed-4aff-9a7a-303726408041" class="bulleted-list"><li style="list-style-type:disc">prints &quot;Hello World!&quot;</li></ul><p id="6b86533b-ff49-4f92-bd65-4c3b8ed3f6a4" class="">The Java compiler ignores everything from <code>//</code> to the end of line. Hence, it is also known as <strong>End of Line</strong> comment.</p><hr id="d11496e8-97ce-40d1-924d-a8409cb31713"/><h3 id="5999faa3-c53d-40b2-ab74-b7f4554e9fae" class=""><strong>Multi-line Comment</strong></h3><p id="9fd2b241-15ed-48f3-bc91-bd5a00774158" class="">When we want to write comments in multiple lines, we can use the multi-line comment. To write multi-line comments, we can use the /*....*/ symbol. For example,</p><pre id="7a741d57-c250-496e-b394-6d175255d9c5" class="code code-wrap"><code>/* This is an example of  multi-line comment.
- * The program prints &quot;Hello, World!&quot; to the standard output.
- */
+else {
+  // codes in else block
+}</code></pre><p id="ed038076-902f-4784-a376-04904b57c889" class="">
+</p><hr id="352d7ebd-309c-477d-90f5-22adb65ba06a"/><h1 id="836ebc60-cc5d-4f9a-9cf1-866d64bc8866" class="">3. Java if...else...if Statement</h1><p id="a6612aee-62fc-41ae-9a50-8dac17f4f1bf" class="">In Java, we have an <strong>if...else...if</strong> ladder, that can be used to execute one block of code among multiple other blocks.</p><pre id="b55bcc28-1973-4b0e-9057-e90adb170a6e" class="code code-wrap"><code>if (condition1) {
+  // codes
+}
+else if(condition2) {
+  // codes
+}
+else if (condition3) {
+  // codes
+}
+else {
+  // codes
+}</code></pre><p id="bd638470-7a9b-40ba-817a-da19ff07e3f3" class="">
+</p><h3 id="25cfef51-d4c3-4004-9a58-711ab01a7001" class=""><strong>Example:</strong></h3><pre id="1b24c086-f940-4456-80dc-eaed6ea57cee" class="code code-wrap"><code>class Main {
+  public static void main(String[] args) {
 
-class HelloWorld {
-    public static void main(String[] args) {
+    int number = 0;
 
-        System.out.println(&quot;Hello, World!&quot;);
+    // checks if number is greater than 0
+    if (number &gt; 0) {
+      System.out.println(&quot;The number is positive.&quot;);
     }
-}
-</code></pre><p id="dfbf2938-8ae8-4051-a935-1431a931eaad" class="">
-</p><p id="4dec587a-4457-4fe3-a9f0-f7245ab242e4" class=""><strong>Output</strong>:</p><pre id="e9ef73b3-5a2c-40e8-b606-41e9be0cf0bc" class="code code-wrap"><code>Hello, World!
-</code></pre><p id="dc49fbd5-372e-46c4-93c6-6bfaa10e95a1" class="">Here, we have used the multi-line comment:</p><pre id="3d136070-5110-4577-85ce-9017f8d826a0" class="code code-wrap"><code>/* This is an example of multi-line comment.
-* The program prints &quot;Hello, World!&quot; to the standard output.
-*/
-</code></pre><p id="e645e3e6-7558-4847-808f-748b3586f41d" class="">This type of comment is also known as <strong>Traditional Comment</strong>. In this type of comment, the Java compiler ignores everything from <code>/*</code> to <code>*/</code>.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+
+    // checks if number is less than 0
+    else if (number &lt; 0) {
+      System.out.println(&quot;The number is negative.&quot;);
+    }
+
+    // if both condition is false
+    else {
+      System.out.println(&quot;The number is 0.&quot;);
+    }
+  }
+}</code></pre><p id="c2dc9d03-b785-4449-b3d8-6c3a16d958b5" class=""><strong>Output</strong></p><pre id="09b33cd9-c280-4193-94cc-fb0120cf676a" class="code code-wrap"><code>The number is 0.</code></pre><p id="07ce0c84-1a3a-4f64-9efc-f7b57da046fc" class="">
+</p><hr id="1fcd66e7-6d55-49f0-bd15-dca2795de28b"/></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
