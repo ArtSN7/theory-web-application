@@ -11,7 +11,7 @@ from pages import log_reg, homepage
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'SECRET_KEY'
+app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 app.config['PERMANENT_SESSION_LIFETIME'] = datetime.timedelta(days=1)
 
 login_manager = LoginManager()

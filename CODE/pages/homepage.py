@@ -16,8 +16,7 @@ blueprint = flask.Blueprint('homepage', __name__, template_folder='templates')
 @blueprint.route('/homepage')
 @login_required
 def homepage():
-    return render_template('java_theory/for.html')
-
+    return render_template('homepage.html', title='homepage', img=['java_logo.jpeg', 'python_logo.png'])
 
 
 @blueprint.route('/logout')
