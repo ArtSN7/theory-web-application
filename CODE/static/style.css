@@ -107,16 +107,26 @@ article {
     background-color: #b1b1b1;
     height: 700px; /* only for demonstration, should be removed */
 }
+
+article img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
   
   /* Clear floats after the columns */
   
   /* Style the footer */
 footer {
-    background-color: #b1b1b1;
+    background-color: #640d0d;
     padding: 10px;
     text-align: center;
     color: white;
     margin-bottom: 0%;
+    display: flex;
+    justify-content: space-between;
     
 }
   
