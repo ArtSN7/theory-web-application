@@ -122,11 +122,9 @@ article img{
 footer {
     background-color: #640d0d;
     padding: 10px;
-    text-align: center;
-    color: white;
+    text-align: left;
+    color: black;
     margin-bottom: 0%;
-    display: flex;
-    justify-content: space-between;
     
 }
   
