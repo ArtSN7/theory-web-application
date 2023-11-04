@@ -1,11 +1,11 @@
-from CODE.data import db_session
+from data import db_session
 from flask import Flask
 from flask_login import LoginManager
 import datetime
 
-from CODE.data.users import User
+from data.users import User
 
-from CODE.pages import log_reg, homepage, javapage,pythonpage
+from pages import log_reg, homepage, javapage,pythonpage
 
 
 
