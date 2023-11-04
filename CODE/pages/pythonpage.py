@@ -10,7 +10,7 @@ from flask_wtf import FlaskForm
 from wtforms.validators import DataRequired
 from data.users import User
 
-blueprint = flask.Blueprint('java', __name__, template_folder='templates')
+blueprint = flask.Blueprint('python', __name__, template_folder='templates')
 
 
 dictt = {
@@ -34,20 +34,7 @@ dictt = {
 }
 
 
-@blueprint.route('/java')
+@blueprint.route('/python')
 @login_required
 def java():
-    return render_template('java.html', title='java', data=dictt)
-
-
-@blueprint.route('/java/<int:number>')
-@login_required
-def java_pages(number):
-    return render_template(f'java_theory/{number}.html', title='java', data=dictt)
-
-
-@blueprint.route('/logout')
-@login_required
-def logout():
-    logout_user()
-    return redirect("/")
+    return "Sorry, we are just developing this page."

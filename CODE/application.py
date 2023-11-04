@@ -5,7 +5,7 @@ import datetime
 
 from data.users import User
 
-from pages import log_reg, homepage, javapage
+from pages import log_reg, homepage, javapage,pythonpage
 
 
 
@@ -34,6 +34,7 @@ if __name__ == '__main__':
     app.register_blueprint(log_reg.blueprint)
     app.register_blueprint(homepage.blueprint)
     app.register_blueprint(javapage.blueprint)
+    app.register_blueprint(pythonpage.blueprint)
 
 
     app.run()
