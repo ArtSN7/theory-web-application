@@ -35,7 +35,6 @@ class RegistrationForm(FlaskForm):
 
 
 # log in page
-@blueprint.route('/', methods=['GET', 'POST'])
 @blueprint.route('/login', methods=['GET', 'POST'])
 def login():
 
