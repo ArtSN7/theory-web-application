@@ -3,9 +3,9 @@ from flask import Flask
 from flask_login import LoginManager
 import datetime
 
-from data.users import User
+from CODE.data.users import User
 
-from pages import log_reg, homepage, javapage,pythonpage
+from CODE.pages import log_reg, homepage, javapage,pythonpage
 
 
 
