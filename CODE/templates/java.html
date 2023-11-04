@@ -24,11 +24,13 @@
     
     <section>
       <nav>
-        <h2>Courses</h2>
+        <h2>Lessons</h2>
         <ul>
-          <li><a href="/python"><img src="static/logos/python_logo.png" title="python" style="width: 128px;"></a></li>
-          <li><a href="/java"><img src="static/logos/java_logo.jpeg" title="java" style="width: 128px;"></a></li>
+          {% for item in data%}
+            <p><a href={{data[item][1]}}>{{data[item][0]}}</a></p>
+          {% endfor %}
         </ul>
+        <h2><a href="/homepage">BACK</a></h2>
       </nav>
       
       <article>

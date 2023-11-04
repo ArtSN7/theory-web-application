@@ -9,6 +9,10 @@ html, body {
 }
 
 
+a:link {
+    color: black; 
+
+  }
 
  /* START OF Log In AND Sign Up pages */ 
 
@@ -80,7 +84,7 @@ html, body {
 nav {
     float: left;
     width: 10%;
-    height: 700px; /* only for demonstration, should be removed */
+    height: 750px; /* only for demonstration, should be removed */
     background-color: #b1b1b1;
     padding: 10px;
 }
@@ -105,7 +109,7 @@ article {
     padding: 20px;
     width: 90%;
     background-color: #b1b1b1;
-    height: 700px; /* only for demonstration, should be removed */
+    height: 750px; /* only for demonstration, should be removed */
 }
 
 article img{
