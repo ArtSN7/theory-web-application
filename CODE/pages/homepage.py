@@ -13,7 +13,7 @@ from data.users import User
 blueprint = flask.Blueprint('homepage', __name__, template_folder='templates')
 
 
-@blueprint.route('/', methods=['GET', 'POST'])
+
 @blueprint.route('/homepage')
 @login_required
 def homepage():
